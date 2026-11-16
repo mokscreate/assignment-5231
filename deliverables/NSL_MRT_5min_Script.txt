@@ -1,44 +1,26 @@
-NSL MRT — FIVE-MINUTE PRESENTATION SCRIPT
-Wang Yulu: slides 1–7. Zhang Xinyue: slides 8–10.
-Target delivery: 4 minutes 50 seconds, leaving a small buffer.
+1. (25s)
+Our starting point is a daily question. We use MRT stations often, but how well do their exits, transfer routes, lifts and toilets support the journey? We examine what passengers have already written, look for recurring experiences and relate them to overall ratings. We then use the review evidence to develop specific proposals.
 
-SLIDE 1 — Research question
-Wang Yulu · approximately 10 seconds
-We study how MRT station-space experiences relate to passenger ratings. Our focus is both the station evidence and the AI method used to extract, test and explain it.
+2. (30s)
+We cover all twenty-seven North-South Line stations. We collected over twenty-one thousand rating records, including seven thousand six hundred text reviews. After screening, three thousand eight hundred and eighty-four reviews enter modelling. Most are highly rated. Our questions concern the details: which experiences recur, which accompany lower ratings, and what practical proposals the comments can support.
 
-SLIDE 2 — Problem and data
-Wang Yulu · approximately 25 seconds
-Our dataset covers twenty-seven stations. After screening, three thousand eight hundred and eighty-four comments enter the common modelling sample. We ask which spatial experiences relate to ratings, and whether frequently mentioned topics also contribute most to prediction. High ratings form eighty percent, so we compare against a majority baseline.
+3. (45s)
+AI makes a large set of comments easier to compare. A dictionary and clause rules encode nine experiences and positive or negative wording. Logistic regression and random forests learn their relationship with ratings. Both authors independently checked one hundred comments, and test stations stay outside model fitting. Adding polarity improves macro F1 from point five five to point six five. Overall tone performs slightly better, so we return to the original comments before proposing changes.
 
-SLIDE 3 — Text representation
-Wang Yulu · approximately 25 seconds
-The workflow separates text encoding from model learning. A fixed dictionary finds nine spatial aspects. Clause rules then add polarity, including negation and contrasts. In this illustrative sentence, the broken lift is negative, while clear signs are positive. These rules create inputs. The rating classifiers learn the associations. Independent human coding checks whether the automatic labels reflect what people actually said.
+4. (35s)
+Amenities and connections to surrounding destinations are mentioned most. They also rank consistently near the top across our spatial models. Less frequent topics can still deserve attention. Vertical access appears in only about four percent of reviews. Among its rule-coded negative mentions, sixty-eight percent are rated one to three stars. For cleanliness the share is sixty-one percent. We next examine what these comments refer to at individual stations.
 
-SLIDE 4 — Models and the control
-Wang Yulu · approximately 30 seconds
-We compare several ways to represent the same comments. B records only whether an aspect appears. C adds positive, negative and neutral indicators. Logistic regression learns feature weights, while a random forest learns combinations. The key control adds overall tone without assigning it to a particular aspect. This tests whether aspect-specific sentiment adds value. A TF-IDF text classifier provides a broader comparison using words and word pairs.
+5. (32s)
+At Dhoby Ghaut, eighty-seven model reviews mention wayfinding or vertical access. Fourteen percent of this subset are one or two stars, compared with eight percent for the station. Reviewers describe difficult exits and complicated transfers, while others praise clear signs. Our candidate proposal is therefore targeted: add exit numbers and destination cues at the main transfer decision points. Some reviews praise clear signs, supporting a focus on specific decision points.
 
-SLIDE 5 — Coding validation
-Wang Yulu · approximately 30 seconds
-Both authors independently coded one hundred reviews in two rounds, with ratings hidden. After clarifying scope and aspect boundaries, scope kappa was point seven seven on forty fresh reviews. The sample and interface also changed. the automatic dictionary has only point four nine precision for individual aspects. Among aspects detected by both the dictionary and humans, the polarity rules find criticism much better than praise. This locates the pipeline’s main errors.
+6. (32s)
+At Jurong East, two hundred and twenty-six model reviews mention wayfinding, crowding or circulation. Their one-to-two-star share is fourteen percent, versus eleven percent for the station. These comments contain several different problems. We separate crowding from platform confusion and construction detours. The candidate proposal starts with information: show the platform before passengers choose a route and clarify directions towards destinations. Positive reviews describe spacious, tidy areas. Information cues offer a focused starting point.
 
-SLIDE 6 — Performance and meaning
-Wang Yulu · approximately 35 seconds
-Models use identical station-grouped splits, keeping every test station outside fitting. AUC rises from point six one for mention flags to point seven four with aspect polarity. However, overall tone reaches point seven five, and full text reaches point eight zero. So sentiment clearly helps, but our aspect rules do not add a gain over general tone. We use AUC and macro F1 because simply predicting a high rating already gives eighty percent accuracy.
+7. (32s)
+At Kranji, fifty-six model reviews mention cleanliness and upkeep. Sixteen percent are one or two stars, compared with ten percent station-wide. The quotations identify dirty toilets, missing supplies and odour near bins. We propose checking toilet cleaning and restocking, and clarifying who manages the bin area. These are review-based candidate proposals. This project did not include site visits. Retain clean and well-maintained accounts to distinguish places and situations.
 
-SLIDE 7 — Research findings
-Wang Yulu · approximately 25 seconds
-Frequency and model reliance give different answers. Amenities and connectivity are both frequently mentioned and rank in the top three in all four B and C models. Vertical access appears in only four percent of reviews, but its position changes across models. Cleanliness becomes first when polarity is added. We therefore report ranking stability rather than treating one model’s ordering as the final practical priority.
+8. (36s)
+The website makes the findings usable. Select a station and inspect its reviews, then click Run this station. In the game, allocate a limited budget to signs, cleaning or other measures. Read the daily feedback and adjust the next choice. The reviews are real evidence. Game outcomes follow illustrative rules, so the game communicates trade-offs rather than predicting the real effect of an intervention.
 
-SLIDE 8 — Evidence cards and proposals
-Zhang Xinyue · approximately 45 seconds
-We translate the analysis into evidence cards at three stations. The counts include all matching reviews. At Dhoby Ghaut, reviews describe difficult exits. At Jurong East, they describe platform confusion and construction routes. At Kranji, they describe toilet condition and odour. Each card includes the denominator, review dates, supporting quotations and positive counterexamples. Candidate actions are clearer destination signs, earlier platform information and targeted cleaning checks. The cards are desk-based proposals; we have not conducted site visits.
-
-SLIDE 9 — Prospective check
-Zhang Xinyue · approximately 30 seconds
-For Woodlands, we froze the rules and models, trained on the other twenty-six stations, then processed thirty-six newly collected records. Only four survived screening, and all four were high-rated. Each model classified three correctly, but AUC cannot be calculated with only one class. This is evidence that the frozen workflow runs on new comments, not a reliable performance estimate. The pilot exclusion also preserved its top three factors.
-
-SLIDE 10 — Conclusion and website
-Zhang Xinyue · approximately 35 seconds
-Our contribution is a reproducible AI workflow with explicit checks at each stage. Human coding reveals extraction errors. The tone control tests whether a more detailed feature set really adds information. The station map lets users inspect the evidence behind candidate changes, including conflicting accounts. The next modelling step is better context and implicit-praise recognition, tested on fresh labels. The website and repository provide the data, code and results. Thank you.
-
+9. (33s)
+The project turns a broad rating into a more specific discussion. We organise nine spatial experiences, use AI to compare their associations with ratings, and check coding errors against human labels. We then connect recurring patterns to quotations, counterexamples and candidate actions. Our outputs are a reproducible analysis workflow, three station cases and an interactive website. Further work can improve context recognition and test it on fresh reviews.
