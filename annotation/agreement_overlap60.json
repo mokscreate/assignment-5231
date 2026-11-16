@@ -1,0 +1,301 @@
+{
+  "round": "overlap60",
+  "coders": [
+    "wang",
+    "zhang"
+  ],
+  "exported_at": [
+    "2026-11-15T14:24:16.973Z",
+    "2026-11-15T10:13:03.377Z"
+  ],
+  "n_records_both_complete": 60,
+  "incomplete_or_missing": [],
+  "scope_7class": {
+    "n": 60,
+    "raw_agreement": 0.43333333333333335,
+    "cohen_kappa": 0.2589901925172539,
+    "counts_coder1": {
+      "station_spatial": 17,
+      "station_operations_only": 8,
+      "generic": 18,
+      "off_topic": 7,
+      "surroundings_only": 8,
+      "train_interior": 1,
+      "unclear": 1
+    },
+    "counts_coder2": {
+      "station_spatial": 39,
+      "off_topic": 10,
+      "surroundings_only": 1,
+      "station_operations_only": 4,
+      "unclear": 1,
+      "generic": 4,
+      "train_interior": 1
+    }
+  },
+  "scope_confusion": {
+    "generic | generic": 1,
+    "generic | off_topic": 3,
+    "generic | station_spatial": 12,
+    "generic | surroundings_only": 1,
+    "generic | unclear": 1,
+    "off_topic | off_topic": 5,
+    "off_topic | station_spatial": 2,
+    "station_operations_only | off_topic": 2,
+    "station_operations_only | station_operations_only": 3,
+    "station_operations_only | station_spatial": 3,
+    "station_spatial | station_operations_only": 1,
+    "station_spatial | station_spatial": 16,
+    "surroundings_only | generic": 3,
+    "surroundings_only | station_spatial": 5,
+    "train_interior | train_interior": 1,
+    "unclear | station_spatial": 1
+  },
+  "spatial_binary": {
+    "n": 60,
+    "raw_agreement": 0.6,
+    "cohen_kappa": 0.2920353982300885,
+    "counts_coder1": {
+      "spatial": 17,
+      "other": 43
+    },
+    "counts_coder2": {
+      "spatial": 39,
+      "other": 21
+    }
+  },
+  "aspect_mention": {
+    "C": {
+      "n": 60,
+      "raw_agreement": 0.8166666666666667,
+      "cohen_kappa": 0.32098765432098764,
+      "counts_coder1": {
+        "absent": 53,
+        "discussed": 7
+      },
+      "counts_coder2": {
+        "absent": 48,
+        "discussed": 12
+      }
+    },
+    "M": {
+      "n": 60,
+      "raw_agreement": 0.8833333333333333,
+      "cohen_kappa": 0.16000000000000017,
+      "counts_coder1": {
+        "absent": 56,
+        "discussed": 4
+      },
+      "counts_coder2": {
+        "absent": 55,
+        "discussed": 5
+      }
+    },
+    "F": {
+      "n": 60,
+      "raw_agreement": 0.9166666666666666,
+      "cohen_kappa": 0.40476190476190455,
+      "counts_coder1": {
+        "absent": 57,
+        "discussed": 3
+      },
+      "counts_coder2": {
+        "absent": 54,
+        "discussed": 6
+      }
+    },
+    "V": {
+      "n": 60,
+      "raw_agreement": 0.95,
+      "cohen_kappa": 0.0,
+      "counts_coder1": {
+        "absent": 60
+      },
+      "counts_coder2": {
+        "absent": 57,
+        "discussed": 3
+      }
+    },
+    "D": {
+      "n": 60,
+      "raw_agreement": 0.9666666666666667,
+      "cohen_kappa": 0.8561151079136691,
+      "counts_coder1": {
+        "absent": 51,
+        "discussed": 9
+      },
+      "counts_coder2": {
+        "absent": 53,
+        "discussed": 7
+      }
+    },
+    "T": {
+      "n": 60,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 58,
+        "discussed": 2
+      },
+      "counts_coder2": {
+        "absent": 58,
+        "discussed": 2
+      }
+    },
+    "Q": {
+      "n": 60,
+      "raw_agreement": 0.9333333333333333,
+      "cohen_kappa": 0.5636363636363637,
+      "counts_coder1": {
+        "absent": 55,
+        "discussed": 5
+      },
+      "counts_coder2": {
+        "absent": 55,
+        "discussed": 5
+      }
+    },
+    "A": {
+      "n": 60,
+      "raw_agreement": 0.7833333333333333,
+      "cohen_kappa": 0.27777777777777785,
+      "counts_coder1": {
+        "discussed": 6,
+        "absent": 54
+      },
+      "counts_coder2": {
+        "discussed": 15,
+        "absent": 45
+      }
+    },
+    "L": {
+      "n": 60,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 59,
+        "discussed": 1
+      },
+      "counts_coder2": {
+        "absent": 59,
+        "discussed": 1
+      }
+    }
+  },
+  "aspect_polarity_when_both_mention": {
+    "C": {
+      "n": 4,
+      "raw_agreement": 0.75,
+      "cohen_kappa": 0.0,
+      "counts_coder1": {
+        "positive": 3,
+        "mixed": 1
+      },
+      "counts_coder2": {
+        "positive": 4
+      }
+    },
+    "M": {
+      "n": 1,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 1
+      },
+      "counts_coder2": {
+        "negative": 1
+      }
+    },
+    "F": {
+      "n": 2,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 2
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    },
+    "V": {
+      "n": 0,
+      "raw_agreement": null,
+      "cohen_kappa": null,
+      "counts_coder1": {},
+      "counts_coder2": {}
+    },
+    "D": {
+      "n": 7,
+      "raw_agreement": 0.8571428571428571,
+      "cohen_kappa": 0.0,
+      "counts_coder1": {
+        "negative": 6,
+        "neutral": 1
+      },
+      "counts_coder2": {
+        "negative": 7
+      }
+    },
+    "T": {
+      "n": 2,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 2
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    },
+    "Q": {
+      "n": 3,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "negative": 2,
+        "positive": 1
+      },
+      "counts_coder2": {
+        "negative": 2,
+        "positive": 1
+      }
+    },
+    "A": {
+      "n": 4,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "negative": 3,
+        "positive": 1
+      },
+      "counts_coder2": {
+        "negative": 3,
+        "positive": 1
+      }
+    },
+    "L": {
+      "n": 1,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 1
+      },
+      "counts_coder2": {
+        "negative": 1
+      }
+    }
+  },
+  "aspect_mention_pooled": {
+    "n": 540,
+    "raw_agreement": 0.9166666666666666,
+    "cohen_kappa": 0.47261046965882403,
+    "counts_coder1": {
+      "false": 503,
+      "true": 37
+    },
+    "counts_coder2": {
+      "false": 484,
+      "true": 56
+    }
+  }
+}

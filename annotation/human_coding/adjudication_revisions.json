@@ -1,0 +1,137 @@
+[
+ {
+  "overlap_id": "H24",
+  "before": {
+   "scope": "surroundings_only"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "C": "positive"
+  },
+  "reason": "v2 rule 2: proximity to destination is C"
+ },
+ {
+  "overlap_id": "H27",
+  "before": {
+   "scope": "generic"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "C": "neutral"
+  },
+  "reason": "v2 rule 2: proximity/gateway is C"
+ },
+ {
+  "overlap_id": "H48",
+  "before": {
+   "scope": "surroundings_only"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "C": "neutral"
+  },
+  "reason": "v2 rule 2: connection to destination/bus is C"
+ },
+ {
+  "overlap_id": "S12",
+  "before": {
+   "scope": "surroundings_only"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "C": "positive"
+  },
+  "reason": "v2 rule 2: near malls is C"
+ },
+ {
+  "overlap_id": "S32",
+  "before": {
+   "scope": "surroundings_only"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "C": "positive"
+  },
+  "reason": "v2 rule 2: mall next to station is C"
+ },
+ {
+  "overlap_id": "H01",
+  "before": {
+   "scope": "station_spatial",
+   "A": "negative"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "Q": "negative"
+  },
+  "reason": "v2 rule 5: ageing fixed facility is Q"
+ },
+ {
+  "overlap_id": "S03",
+  "before": {
+   "scope": "station_spatial",
+   "Q": "negative",
+   "A": "negative"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "Q": "negative"
+  },
+  "reason": "v2 rule 5; no amenity mentioned"
+ },
+ {
+  "overlap_id": "H40",
+  "before": {
+   "scope": "station_spatial",
+   "A": "negative"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "D": "negative"
+  },
+  "reason": "platform capacity vs traffic is D, not amenity"
+ },
+ {
+  "overlap_id": "S07",
+  "before": {
+   "scope": "station_spatial",
+   "D": "negative",
+   "T": "negative",
+   "A": "negative"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "M": "negative",
+   "V": "negative",
+   "D": "negative",
+   "T": "negative"
+  },
+  "reason": "\"Platform A\" is a platform name; escalator/stair layout is V, moving along platform is M"
+ },
+ {
+  "overlap_id": "S19",
+  "before": {
+   "scope": "station_spatial",
+   "D": "negative",
+   "A": "positive"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "D": "negative"
+  },
+  "reason": "no amenity mentioned"
+ },
+ {
+  "overlap_id": "S20",
+  "before": {
+   "scope": "station_spatial",
+   "D": "negative",
+   "A": "negative"
+  },
+  "after": {
+   "scope": "station_spatial",
+   "F": "negative"
+  },
+  "reason": "confusing platform assignment is wayfinding (F)"
+ }
+]

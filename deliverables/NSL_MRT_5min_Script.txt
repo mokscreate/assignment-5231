@@ -1,0 +1,44 @@
+NSL MRT — FIVE-MINUTE PRESENTATION SCRIPT
+Wang Yulu: slides 1–7. Zhang Xinyue: slides 8–10.
+Target delivery: 4 minutes 50 seconds, leaving a small buffer.
+
+SLIDE 1 — Research question
+Wang Yulu · approximately 10 seconds
+We study how MRT station-space experiences relate to passenger ratings. Our focus is both the station evidence and the AI method used to extract, test and explain it.
+
+SLIDE 2 — Problem and data
+Wang Yulu · approximately 25 seconds
+Our dataset covers twenty-seven stations. After screening, three thousand eight hundred and eighty-four comments enter the common modelling sample. We ask which spatial experiences relate to ratings, and whether frequently mentioned topics also contribute most to prediction. High ratings form eighty percent, so we compare against a majority baseline.
+
+SLIDE 3 — Text representation
+Wang Yulu · approximately 25 seconds
+The workflow separates text encoding from model learning. A fixed dictionary finds nine spatial aspects. Clause rules then add polarity, including negation and contrasts. In this illustrative sentence, the broken lift is negative, while clear signs are positive. These rules create inputs. The rating classifiers learn the associations. Independent human coding checks whether the automatic labels reflect what people actually said.
+
+SLIDE 4 — Models and the control
+Wang Yulu · approximately 30 seconds
+We compare several ways to represent the same comments. B records only whether an aspect appears. C adds positive, negative and neutral indicators. Logistic regression learns feature weights, while a random forest learns combinations. The key control adds overall tone without assigning it to a particular aspect. This tests whether aspect-specific sentiment adds value. A TF-IDF text classifier provides a broader comparison using words and word pairs.
+
+SLIDE 5 — Coding validation
+Wang Yulu · approximately 30 seconds
+Both authors independently coded one hundred reviews in two rounds, with ratings hidden. After clarifying scope and aspect boundaries, scope kappa was point seven seven on forty fresh reviews. The sample and interface also changed. the automatic dictionary has only point four nine precision for individual aspects. Among aspects detected by both the dictionary and humans, the polarity rules find criticism much better than praise. This locates the pipeline’s main errors.
+
+SLIDE 6 — Performance and meaning
+Wang Yulu · approximately 35 seconds
+Models use identical station-grouped splits, keeping every test station outside fitting. AUC rises from point six one for mention flags to point seven four with aspect polarity. However, overall tone reaches point seven five, and full text reaches point eight zero. So sentiment clearly helps, but our aspect rules do not add a gain over general tone. We use AUC and macro F1 because simply predicting a high rating already gives eighty percent accuracy.
+
+SLIDE 7 — Research findings
+Wang Yulu · approximately 25 seconds
+Frequency and model reliance give different answers. Amenities and connectivity are both frequently mentioned and rank in the top three in all four B and C models. Vertical access appears in only four percent of reviews, but its position changes across models. Cleanliness becomes first when polarity is added. We therefore report ranking stability rather than treating one model’s ordering as the final practical priority.
+
+SLIDE 8 — Evidence cards and proposals
+Zhang Xinyue · approximately 45 seconds
+We translate the analysis into evidence cards at three stations. The counts include all matching reviews. At Dhoby Ghaut, reviews describe difficult exits. At Jurong East, they describe platform confusion and construction routes. At Kranji, they describe toilet condition and odour. Each card includes the denominator, review dates, supporting quotations and positive counterexamples. Candidate actions are clearer destination signs, earlier platform information and targeted cleaning checks. The cards are desk-based proposals; we have not conducted site visits.
+
+SLIDE 9 — Prospective check
+Zhang Xinyue · approximately 30 seconds
+For Woodlands, we froze the rules and models, trained on the other twenty-six stations, then processed thirty-six newly collected records. Only four survived screening, and all four were high-rated. Each model classified three correctly, but AUC cannot be calculated with only one class. This is evidence that the frozen workflow runs on new comments, not a reliable performance estimate. The pilot exclusion also preserved its top three factors.
+
+SLIDE 10 — Conclusion and website
+Zhang Xinyue · approximately 35 seconds
+Our contribution is a reproducible AI workflow with explicit checks at each stage. Human coding reveals extraction errors. The tone control tests whether a more detailed feature set really adds information. The station map lets users inspect the evidence behind candidate changes, including conflicting accounts. The next modelling step is better context and implicit-praise recognition, tested on fresh labels. The website and repository provide the data, code and results. Thank you.
+

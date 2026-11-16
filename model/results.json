@@ -1,0 +1,546 @@
+{
+  "scope": "Expanded-corpus models; automatic coding, not a validated final research conclusion",
+  "raw_records": 21796,
+  "text_records": 7636,
+  "screening": {
+    "rating_only": 14160,
+    "included": 3884,
+    "no_dictionary_spatial_match": 2528,
+    "duplicate_normalized_text": 1153,
+    "no_lexical_text": 71
+  },
+  "model_records": 3884,
+  "model_stations": 27,
+  "rating_distribution": {
+    "1": 196,
+    "2": 116,
+    "3": 455,
+    "4": 1076,
+    "5": 2041
+  },
+  "performance": {
+    "MajorityBaseline": {
+      "mean_repeated_group_cv": {
+        "auc": 0.48194714409784306,
+        "macro_f1": 0.44522211112698185,
+        "balanced_accuracy": 0.5,
+        "accuracy": 0.8025231719876414
+      },
+      "repeat_metrics": [
+        {
+          "auc": 0.4820440457950449,
+          "macro_f1": 0.44522211112698185,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8025231719876416
+        },
+        {
+          "auc": 0.4817533407034394,
+          "macro_f1": 0.44522211112698185,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8025231719876416
+        },
+        {
+          "auc": 0.4820440457950449,
+          "macro_f1": 0.44522211112698185,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8025231719876416
+        }
+      ],
+      "first_repeat_station_bootstrap_95_ci": {
+        "auc": [
+          0.44055238885628484,
+          0.5363504009724934
+        ],
+        "macro_f1": [
+          0.43813114100660777,
+          0.45249294536871365
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.5
+        ],
+        "accuracy": [
+          0.7797747550614523,
+          0.8264604841846964
+        ]
+      }
+    },
+    "SpatialLogisticRegression": {
+      "mean_repeated_group_cv": {
+        "auc": 0.6093078332682907,
+        "macro_f1": 0.5514262975743338,
+        "balanced_accuracy": 0.5857673436261062,
+        "accuracy": 0.6396326810847923
+      },
+      "repeat_metrics": [
+        {
+          "auc": 0.6103512344927656,
+          "macro_f1": 0.552966650133476,
+          "balanced_accuracy": 0.5873282277990195,
+          "accuracy": 0.6413491246138002
+        },
+        {
+          "auc": 0.6072210308193409,
+          "macro_f1": 0.5483455924560494,
+          "balanced_accuracy": 0.5826455752802795,
+          "accuracy": 0.6361997940267765
+        },
+        {
+          "auc": 0.6103512344927656,
+          "macro_f1": 0.552966650133476,
+          "balanced_accuracy": 0.5873282277990195,
+          "accuracy": 0.6413491246138002
+        }
+      ],
+      "first_repeat_station_bootstrap_95_ci": {
+        "auc": [
+          0.5673521128759794,
+          0.652541451249968
+        ],
+        "macro_f1": [
+          0.5273219397372365,
+          0.5743334202281387
+        ],
+        "balanced_accuracy": [
+          0.5519415173258673,
+          0.6210576981715691
+        ],
+        "accuracy": [
+          0.6098321520876478,
+          0.6685670660562196
+        ]
+      }
+    },
+    "SpatialRandomForest": {
+      "mean_repeated_group_cv": {
+        "auc": 0.6339281145564893,
+        "macro_f1": 0.5804285700720905,
+        "balanced_accuracy": 0.6067856006029935,
+        "accuracy": 0.6812564366632338
+      },
+      "repeat_metrics": [
+        {
+          "auc": 0.6340635677922183,
+          "macro_f1": 0.5808274438512759,
+          "balanced_accuracy": 0.607106421905528,
+          "accuracy": 0.6817713697219362
+        },
+        {
+          "auc": 0.6336572080850315,
+          "macro_f1": 0.5796308225137197,
+          "balanced_accuracy": 0.6061439579979244,
+          "accuracy": 0.680226570545829
+        },
+        {
+          "auc": 0.6340635677922183,
+          "macro_f1": 0.5808274438512759,
+          "balanced_accuracy": 0.607106421905528,
+          "accuracy": 0.6817713697219362
+        }
+      ],
+      "first_repeat_station_bootstrap_95_ci": {
+        "auc": [
+          0.5942752661653437,
+          0.6678537400252684
+        ],
+        "macro_f1": [
+          0.555081216468368,
+          0.6016475234071684
+        ],
+        "balanced_accuracy": [
+          0.5737494565570276,
+          0.6372422776630599
+        ],
+        "accuracy": [
+          0.6606301760338162,
+          0.7034958304965581
+        ]
+      }
+    },
+    "TextTFIDFLogisticRegression": {
+      "mean_repeated_group_cv": {
+        "auc": 0.7959446848861376,
+        "macro_f1": 0.7006327731088033,
+        "balanced_accuracy": 0.7289637918094224,
+        "accuracy": 0.7869035358736697
+      },
+      "repeat_metrics": [
+        {
+          "auc": 0.7952607959296267,
+          "macro_f1": 0.7001642408448036,
+          "balanced_accuracy": 0.7280911885404471,
+          "accuracy": 0.7868177136972193
+        },
+        {
+          "auc": 0.7973124627991596,
+          "macro_f1": 0.7015698376368027,
+          "balanced_accuracy": 0.7307089983473729,
+          "accuracy": 0.7870751802265705
+        },
+        {
+          "auc": 0.7952607959296267,
+          "macro_f1": 0.7001642408448036,
+          "balanced_accuracy": 0.7280911885404471,
+          "accuracy": 0.7868177136972193
+        }
+      ],
+      "first_repeat_station_bootstrap_95_ci": {
+        "auc": [
+          0.7745963227601744,
+          0.8145956500773732
+        ],
+        "macro_f1": [
+          0.6764052117409073,
+          0.7197001077776678
+        ],
+        "balanced_accuracy": [
+          0.7053905196545568,
+          0.749596841104402
+        ],
+        "accuracy": [
+          0.7649805569844067,
+          0.8093888038424787
+        ]
+      }
+    }
+  },
+  "neutral_excluded_sensitivity": {
+    "n": 3429,
+    "auc": 0.6766851344570304,
+    "macro_f1": 0.5092887180514108,
+    "balanced_accuracy": 0.627403074948792,
+    "accuracy": 0.6582093904928551
+  },
+  "folds": [
+    {
+      "repeat": 0,
+      "fold": 0,
+      "test_stations": [
+        "Braddell",
+        "City Hall",
+        "Jurong East",
+        "Khatib",
+        "Somerset"
+      ],
+      "test_n": 756
+    },
+    {
+      "repeat": 0,
+      "fold": 1,
+      "test_stations": [
+        "Bukit Batok",
+        "Choa Chu Kang",
+        "Marina Bay",
+        "Orchard",
+        "Raffles Place",
+        "Woodlands",
+        "Yew Tee"
+      ],
+      "test_n": 833
+    },
+    {
+      "repeat": 0,
+      "fold": 2,
+      "test_stations": [
+        "Ang Mo Kio",
+        "Marina South Pier",
+        "Marsiling",
+        "Newton",
+        "Sembawang",
+        "Toa Payoh",
+        "Yio Chu Kang"
+      ],
+      "test_n": 799
+    },
+    {
+      "repeat": 0,
+      "fold": 3,
+      "test_stations": [
+        "Bishan",
+        "Canberra",
+        "Dhoby Ghaut",
+        "Novena",
+        "Yishun"
+      ],
+      "test_n": 781
+    },
+    {
+      "repeat": 0,
+      "fold": 4,
+      "test_stations": [
+        "Admiralty",
+        "Bukit Gombak",
+        "Kranji"
+      ],
+      "test_n": 715
+    },
+    {
+      "repeat": 1,
+      "fold": 0,
+      "test_stations": [
+        "Braddell",
+        "City Hall",
+        "Jurong East",
+        "Khatib",
+        "Somerset"
+      ],
+      "test_n": 756
+    },
+    {
+      "repeat": 1,
+      "fold": 1,
+      "test_stations": [
+        "Bukit Batok",
+        "Choa Chu Kang",
+        "Marina Bay",
+        "Orchard",
+        "Raffles Place",
+        "Woodlands"
+      ],
+      "test_n": 805
+    },
+    {
+      "repeat": 1,
+      "fold": 2,
+      "test_stations": [
+        "Bishan",
+        "Canberra",
+        "Novena",
+        "Sembawang",
+        "Toa Payoh"
+      ],
+      "test_n": 785
+    },
+    {
+      "repeat": 1,
+      "fold": 3,
+      "test_stations": [
+        "Ang Mo Kio",
+        "Dhoby Ghaut",
+        "Marina South Pier",
+        "Marsiling",
+        "Newton",
+        "Yew Tee",
+        "Yio Chu Kang",
+        "Yishun"
+      ],
+      "test_n": 823
+    },
+    {
+      "repeat": 1,
+      "fold": 4,
+      "test_stations": [
+        "Admiralty",
+        "Bukit Gombak",
+        "Kranji"
+      ],
+      "test_n": 715
+    },
+    {
+      "repeat": 2,
+      "fold": 0,
+      "test_stations": [
+        "Braddell",
+        "City Hall",
+        "Jurong East",
+        "Khatib",
+        "Somerset"
+      ],
+      "test_n": 756
+    },
+    {
+      "repeat": 2,
+      "fold": 1,
+      "test_stations": [
+        "Bukit Batok",
+        "Choa Chu Kang",
+        "Marina Bay",
+        "Orchard",
+        "Raffles Place",
+        "Woodlands",
+        "Yew Tee"
+      ],
+      "test_n": 833
+    },
+    {
+      "repeat": 2,
+      "fold": 2,
+      "test_stations": [
+        "Ang Mo Kio",
+        "Marina South Pier",
+        "Marsiling",
+        "Newton",
+        "Sembawang",
+        "Toa Payoh",
+        "Yio Chu Kang"
+      ],
+      "test_n": 799
+    },
+    {
+      "repeat": 2,
+      "fold": 3,
+      "test_stations": [
+        "Bishan",
+        "Canberra",
+        "Dhoby Ghaut",
+        "Novena",
+        "Yishun"
+      ],
+      "test_n": 781
+    },
+    {
+      "repeat": 2,
+      "fold": 4,
+      "test_stations": [
+        "Admiralty",
+        "Bukit Gombak",
+        "Kranji"
+      ],
+      "test_n": 715
+    }
+  ],
+  "factors": [
+    {
+      "code": "C",
+      "factor": "Station-city connectivity",
+      "mentions": 1495,
+      "mention_percent": 38.49124613800206,
+      "logistic_auc_drop": 0.02868241437759056,
+      "logistic_ci_low": 0.01541336968071473,
+      "logistic_ci_high": 0.04146430590114261,
+      "forest_auc_drop": 0.032995585604841615,
+      "forest_ci_low": 0.022796129577129336,
+      "forest_ci_high": 0.041090451859323536,
+      "frequency_rank": 2,
+      "logistic_importance_rank": 1,
+      "forest_importance_rank": 3
+    },
+    {
+      "code": "M",
+      "factor": "Walking and transfer paths",
+      "mentions": 481,
+      "mention_percent": 12.384140061791966,
+      "logistic_auc_drop": 0.0030793477107565748,
+      "logistic_ci_low": -0.0019445004490012629,
+      "logistic_ci_high": 0.007949733211584232,
+      "forest_auc_drop": 0.003819286282052081,
+      "forest_ci_low": -0.000563238916351752,
+      "forest_ci_high": 0.009026622883365457,
+      "frequency_rank": 5,
+      "logistic_importance_rank": 4,
+      "forest_importance_rank": 6
+    },
+    {
+      "code": "F",
+      "factor": "Wayfinding and signage",
+      "mentions": 457,
+      "mention_percent": 11.766220391349124,
+      "logistic_auc_drop": 0.002762151507685884,
+      "logistic_ci_low": -0.00034414874294196865,
+      "logistic_ci_high": 0.006582021413038083,
+      "forest_auc_drop": 0.0029542817792601594,
+      "forest_ci_low": -0.00031553901444931744,
+      "forest_ci_high": 0.006129722529284796,
+      "frequency_rank": 6,
+      "logistic_importance_rank": 5,
+      "forest_importance_rank": 7
+    },
+    {
+      "code": "V",
+      "factor": "Vertical circulation and accessibility",
+      "mentions": 162,
+      "mention_percent": 4.170957775489186,
+      "logistic_auc_drop": 0.02094045676532097,
+      "logistic_ci_low": 0.010441353744812993,
+      "logistic_ci_high": 0.03342640266976771,
+      "forest_auc_drop": 0.021027250012095267,
+      "forest_ci_low": 0.009393004275204042,
+      "forest_ci_high": 0.03623056676816224,
+      "frequency_rank": 9,
+      "logistic_importance_rank": 2,
+      "forest_importance_rank": 4
+    },
+    {
+      "code": "D",
+      "factor": "Crowding and pedestrian flow",
+      "mentions": 889,
+      "mention_percent": 22.888774459320288,
+      "logistic_auc_drop": 0.0010004228817951377,
+      "logistic_ci_low": -0.00346270264543696,
+      "logistic_ci_high": 0.005092636659051059,
+      "forest_auc_drop": 0.009709933483607713,
+      "forest_ci_low": 0.002717929871836941,
+      "forest_ci_high": 0.015409252502853842,
+      "frequency_rank": 3,
+      "logistic_importance_rank": 6,
+      "forest_importance_rank": 5
+    },
+    {
+      "code": "T",
+      "factor": "Thermal comfort, air and shelter",
+      "mentions": 259,
+      "mention_percent": 6.668383110195675,
+      "logistic_auc_drop": -0.00039851694392400994,
+      "logistic_ci_low": -0.0014757998391256798,
+      "logistic_ci_high": 0.00048346926728194667,
+      "forest_auc_drop": 0.0002926222115142707,
+      "forest_ci_low": -0.002426251883704142,
+      "forest_ci_high": 0.0034935787795217933,
+      "frequency_rank": 8,
+      "logistic_importance_rank": 8,
+      "forest_importance_rank": 9
+    },
+    {
+      "code": "Q",
+      "factor": "Cleanliness and maintenance",
+      "mentions": 741,
+      "mention_percent": 19.07826982492276,
+      "logistic_auc_drop": -0.0024817988635871258,
+      "logistic_ci_low": -0.01049953500754774,
+      "logistic_ci_high": 0.005359629655321326,
+      "forest_auc_drop": 0.035272148068024256,
+      "forest_ci_low": 0.02063864322020194,
+      "forest_ci_high": 0.04935666168669759,
+      "frequency_rank": 4,
+      "logistic_importance_rank": 9,
+      "forest_importance_rank": 2
+    },
+    {
+      "code": "A",
+      "factor": "Amenities and dwell support",
+      "mentions": 1623,
+      "mention_percent": 41.786817713697225,
+      "logistic_auc_drop": 0.016059713474926962,
+      "logistic_ci_low": -0.0017773209443024795,
+      "logistic_ci_high": 0.035307906064433854,
+      "forest_auc_drop": 0.05110410769780116,
+      "forest_ci_low": 0.032680306017326605,
+      "forest_ci_high": 0.06908651192896771,
+      "frequency_rank": 1,
+      "logistic_importance_rank": 3,
+      "forest_importance_rank": 1
+    },
+    {
+      "code": "L",
+      "factor": "Lighting and spatial ambience",
+      "mentions": 324,
+      "mention_percent": 8.341915550978372,
+      "logistic_auc_drop": 0.00016874140868849974,
+      "logistic_ci_low": -0.006231233877529904,
+      "logistic_ci_high": 0.0053100381626455,
+      "forest_auc_drop": 0.0007461779251799472,
+      "forest_ci_low": -0.005121083965387918,
+      "forest_ci_high": 0.005482347566248109,
+      "frequency_rank": 7,
+      "logistic_importance_rank": 7,
+      "forest_importance_rank": 8
+    }
+  ],
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  },
+  "coded_data_sha256": "9b5efbe810b5806736bb381961ab263a35ccca9f74effe5d505e789b0274103d",
+  "unique_group_partitions": 2
+}

@@ -1,0 +1,181 @@
+{
+  "development_vs_single_AI_200": {
+    "aspect_instances_compared": 111,
+    "raw_agreement": 0.7477477477477478,
+    "cohen_kappa": 0.5930339138405133,
+    "reference_counts": {
+      "negative": 56,
+      "neutral": 29,
+      "positive": 26
+    },
+    "rule_counts": {
+      "mixed": 1,
+      "negative": 58,
+      "neutral": 28,
+      "positive": 24
+    },
+    "confusion_reference_by_rule": {
+      "positive | positive": 20,
+      "neutral | neutral": 16,
+      "negative | negative": 47,
+      "neutral | negative": 10,
+      "negative | neutral": 7,
+      "neutral | positive": 3,
+      "positive | neutral": 5,
+      "positive | negative": 1,
+      "negative | positive": 1,
+      "negative | mixed": 1
+    },
+    "negative_recall": 0.8571428571428571,
+    "positive_recall": 0.7692307692307693,
+    "presence_dictionary_vs_reference": {
+      "C": {
+        "both": 18,
+        "dictionary_only": 4,
+        "reference_only": 17,
+        "neither": 51
+      },
+      "M": {
+        "both": 8,
+        "dictionary_only": 3,
+        "reference_only": 5,
+        "neither": 74
+      },
+      "F": {
+        "both": 14,
+        "dictionary_only": 5,
+        "reference_only": 4,
+        "neither": 67
+      },
+      "V": {
+        "both": 9,
+        "dictionary_only": 2,
+        "reference_only": 2,
+        "neither": 77
+      },
+      "D": {
+        "both": 20,
+        "dictionary_only": 3,
+        "reference_only": 5,
+        "neither": 62
+      },
+      "T": {
+        "both": 9,
+        "dictionary_only": 0,
+        "reference_only": 0,
+        "neither": 81
+      },
+      "Q": {
+        "both": 13,
+        "dictionary_only": 0,
+        "reference_only": 10,
+        "neither": 67
+      },
+      "A": {
+        "both": 15,
+        "dictionary_only": 4,
+        "reference_only": 4,
+        "neither": 67
+      },
+      "L": {
+        "both": 5,
+        "dictionary_only": 4,
+        "reference_only": 2,
+        "neither": 79
+      }
+    },
+    "note": "Uncertain reference labels excluded. Presence comes from the fixed dictionary, polarity from the rule lexicon.",
+    "records": 90,
+    "reference": "single-AI initial annotation (development only, not human)"
+  },
+  "test_vs_human_adjudicated_100": {
+    "aspect_instances_compared": 54,
+    "raw_agreement": 0.6296296296296297,
+    "cohen_kappa": 0.33579335793357934,
+    "reference_counts": {
+      "mixed": 1,
+      "negative": 37,
+      "neutral": 4,
+      "positive": 12
+    },
+    "rule_counts": {
+      "mixed": 2,
+      "negative": 32,
+      "neutral": 17,
+      "positive": 3
+    },
+    "confusion_reference_by_rule": {
+      "negative | negative": 30,
+      "negative | neutral": 5,
+      "positive | neutral": 9,
+      "neutral | negative": 2,
+      "mixed | neutral": 1,
+      "positive | mixed": 1,
+      "negative | positive": 1,
+      "positive | positive": 2,
+      "neutral | neutral": 2,
+      "negative | mixed": 1
+    },
+    "negative_recall": 0.8378378378378378,
+    "positive_recall": 0.25,
+    "presence_dictionary_vs_reference": {
+      "C": {
+        "both": 11,
+        "dictionary_only": 6,
+        "reference_only": 9,
+        "neither": 34
+      },
+      "M": {
+        "both": 2,
+        "dictionary_only": 8,
+        "reference_only": 7,
+        "neither": 43
+      },
+      "F": {
+        "both": 8,
+        "dictionary_only": 2,
+        "reference_only": 1,
+        "neither": 49
+      },
+      "V": {
+        "both": 4,
+        "dictionary_only": 1,
+        "reference_only": 1,
+        "neither": 54
+      },
+      "D": {
+        "both": 12,
+        "dictionary_only": 3,
+        "reference_only": 2,
+        "neither": 43
+      },
+      "T": {
+        "both": 4,
+        "dictionary_only": 5,
+        "reference_only": 0,
+        "neither": 51
+      },
+      "Q": {
+        "both": 4,
+        "dictionary_only": 1,
+        "reference_only": 5,
+        "neither": 50
+      },
+      "A": {
+        "both": 7,
+        "dictionary_only": 8,
+        "reference_only": 9,
+        "neither": 36
+      },
+      "L": {
+        "both": 2,
+        "dictionary_only": 3,
+        "reference_only": 1,
+        "neither": 54
+      }
+    },
+    "note": "Uncertain reference labels excluded. Presence comes from the fixed dictionary, polarity from the rule lexicon.",
+    "records": 60,
+    "reference": "human adjudicated labels, codebook v2 (station_spatial records only)"
+  }
+}

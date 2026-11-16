@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NSL MRT: station-space experiences and passenger ratings</title>
+<style>
+:root{--blue:#1f5fbf;--ink:#1d2330;--mut:#5b6475;--line:#e3e7ee;--bg:#f6f8fb;--red:#c0392b;--grn:#2e7d5b}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+header{border-top:6px solid var(--blue);padding:36px 0 22px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;color:var(--blue)}h2{font-size:22px;margin:0 0 6px;color:var(--blue)}
+.sub{color:var(--mut);margin:0}section{padding:34px 0;border-top:1px solid var(--line)}
+.lead{color:var(--mut);margin:0 0 16px;max-width:760px}
+.funnel{display:flex;gap:10px;flex-wrap:wrap}.fn{flex:1;min-width:150px;background:var(--bg);border-radius:8px;padding:12px 14px}
+.fn b{display:block;font-size:24px;color:var(--blue)}.fn span{font-size:13px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{color:var(--mut);font-weight:600}
+.note{font-size:13.5px;color:var(--mut);margin-top:10px;max-width:800px}
+#map{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+@media(max-width:760px){#map{grid-template-columns:1fr}}
+#mapsvg{width:100%;height:auto;background:#fff}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:#fff3d6;color:#8a5a00;margin-bottom:6px}
+.q{border-left:3px solid var(--red);padding:2px 0 2px 10px;margin:8px 0;font-size:14.5px}.q.p{border-color:var(--grn)}
+.q small{display:block;color:var(--mut);font-size:12px;word-break:break-all}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;margin:6px 0 2px}.bar i{display:block}
+.legend{font-size:13px;color:var(--mut)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--bg);font-size:13px;margin:2px 4px 2px 0}
+svg text{font-family:inherit}
+footer{padding:26px 0 50px;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}
+button.stn{cursor:pointer}
+</style></head><body>
+<div class="w"><header>
+<h1>Which station-space experiences go with passenger ratings?</h1>
+<p class="sub">Singapore North-South Line (27 stations) · Google Maps reviews captured 4 Oct 2026 · BPS5231 · Wang Yulu and Zhang Xinyue</p>
+</header>
+
+<section><h2>1. Data</h2>
+<p class="lead">Reviews were collected newest-first for all 27 stations. Most records are rating-only, and the model uses the 3,884 text reviews that mention a station-space aspect.</p>
+<div class="funnel" id="funnel"></div>
+<p class="note">Counts match the displayed total at 26 stations; Yew Tee returned 145 of 146. Online reviewers are self-selected, so this is not a random sample of passengers.</p></section>
+
+<section><h2>2. Mentioned most is not predictive most</h2>
+<p class="lead">Left: how often each aspect is mentioned. Right: how much the held-out AUC falls when that aspect is shuffled (mention-only logistic regression, 95% station-bootstrap interval). In this model vertical access (V) is rarely mentioned but ranks second, while cleanliness (Q) is the reverse. The table below shows how far these ranks hold across models.</p>
+<svg id="fchart" viewBox="0 0 900 360" width="100%"></svg>
+<p class="note">Importance here is predictive reliance in a fitted model, not a benefit of changing the space. A negative or near-zero value only means that shuffling did not hurt this model's predictions; it does not mean the issue does not matter in practice. Rankings also differ between the logistic and random forest models.</p>
+<h3 style="font-size:17px;margin:22px 0 4px">How stable are the ranks?</h3><p class="lead" style="margin-bottom:8px">Share of 300 station resamples in which each aspect ranks in the top three, for mention-only (B) and aspect-plus-polarity (C) models, next to how often a negative mention comes with a 1–3★ rating (all reviews: 20%).</p><table id="rankt"></table><p class="note">Connectivity (C) and amenities (A) occupy the top three point-estimate ranks in all four spatial models shown here (B and C). Within these four models, vertical access (V) ranks in the top three consistently only in mention-only logistic regression; cleanliness (Q) moves to first once polarity is added, because “clean” and “dirty” carry sentiment. Polarity is coded by fixed rules (see section 5). Resamples reuse fixed out-of-fold predictions.</p></section>
+
+<section><h2>3. Do the spatial features carry rating information?</h2>
+<p class="lead">All models were evaluated on whole held-out stations (grouped 5-fold, three seeded runs that form two distinct partitions). High ratings are 80% of the sample, so accuracy alone is misleading and macro F1 and AUC are shown.</p>
+<table id="perf"></table>
+<p class="note">Adding polarity (C) raises AUC by about 0.11–0.13 over mention flags (station-bootstrap intervals above zero), but a control with mention flags plus whole-review sentiment does slightly better, so these rules do not show that knowing which aspect was praised or criticised adds information beyond the overall tone.</p><p class="note">AUC is a ranking score, not percent accuracy. Spatial mention flags carry modest information; the text model is stronger but also uses general sentiment words, so it is a comparison point and not a diagnosis of physical causes. Mention flags record that an aspect was mentioned, not whether it was praised or criticised.</p></section>
+
+<section><h2>4. Station map and evidence cards</h2>
+<p class="lead">Select a station. Three stations have case cards that pair recurring complaints with counter-evidence and a candidate improvement. Stations are listed north to south; circle size shows how many text reviews entered the model.</p>
+<div id="map"><svg id="mapsvg" viewBox="0 0 300 740"></svg><div id="detail" class="card"></div></div>
+<p class="note">Case selection: stations were chosen where an aspect had many low-rated mentions in the fitted corpus. Quotations are matched by dictionary and read by us, not independently coded. Review dates are the relative dates shown on the platform at capture (4 Oct 2026). The cards are review-based claims; no site visit or present-day physical check has been made, so every proposal is a candidate to verify on site.</p></section>
+
+<section><h2>5. How far the labels have been checked</h2>
+<ul>
+<li>Aspect coding in the model uses a fixed English/Chinese keyword dictionary. It cannot tell praise from complaint.</li>
+<li>One AI read a stratified 200-review sample with ratings hidden: 90 station-space, 22 unclear, 88 other. These counts are not population shares. Agreement with the dictionary on station-space scope is 61 + 68 of 160 reviews (about 81%), with detection of individual aspects weaker (e.g. connectivity: 15 of 32 AI-positive records found by the dictionary).</li>
+<li>Independent human coding: both authors coded the same reviews with ratings hidden, before any discussion. Round 1 (60 reviews, codebook v1): scope κ = 0.26, aspect mention κ = 0.47 (9 aspects × 60). After revising and freezing the codebook (v2), round 2 on 40 new reviews: scope κ = 0.77, aspect mention κ = 0.67. All 100 reviews were then adjudicated jointly.</li>
+<li>The dictionary labels used by the model were checked against the 100 adjudicated human labels. Station-space or not: precision 0.77, recall 0.82 (κ = 0.45). Which aspects are mentioned (9 × 100 decisions): precision 0.49, recall 0.61 (κ = 0.49); the largest over-detection is for amenities (A) and walking paths (M).</li>
+<li>Aspect polarity is coded by fixed rules, checked on the AI development set and then tested once against the 100 adjudicated human labels: 54 aspect instances, raw agreement 0.63, κ = 0.34; the rules find 84% of complaints but only 25% of praise.</li>
+<li>Earlier 224-review pilot: removing its 13 non-spatial reviews gives F1 0.634 → 0.623 and AUC 0.736 → 0.712 (five repeats each); connectivity, amenities and vertical access remain the top three.</li>
+<li>Prospective check: after freezing the codebook, rules and models (trained on the other 26 stations), we collected the 36 Woodlands reviews posted after the 4 Oct capture. Only 4 had text that mentions a station-space aspect, all rated 4–5★; each frozen model classified 3 of 4 correctly. The pipeline runs on new reviews, but the sample is too small to estimate performance. Woodlands’ earlier reviews were seen during development.</li>
+</ul></section>
+<footer>Station-management demo: <a href="game_en.html">play the game</a> (<a href="game_zh.html">中文</a>) · Chinese version of this page: <a href="results_site_zh.html">中文</a>.<br>Code, data and results: <a href="https://github.com/mokscreate/assignment-5231">github.com/mokscreate/assignment-5231</a>. Ratings predict posted star scores, not well-being, and associations are not causal effects. AI assistance was used for coding, analysis scripts and this page.</footer>
+</div>
+<script>
+const D=__DATA__;
+const NM={C:'Connectivity',M:'Walking and transfer paths',F:'Wayfinding and signage',V:'Vertical access',D:'Crowding and flow',T:'Thermal comfort and air',Q:'Cleanliness and upkeep',A:'Amenities',L:'Lighting and ambience'};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const f=n=>n.toLocaleString('en-US');
+// funnel
+const S=D.screening;
+document.getElementById('funnel').innerHTML=[[21796,'rating records, 27 stations'],[7636,'with review text'],[3884,'in the model (after dedup and aspect screen)'],[3117,'rated 4–5 (80%)']]
+ .map(a=>`<div class="fn"><b>${f(a[0])}</b><span>${a[1]}</span></div>`).join('');
+// perf
+const P=D.perf,PP=D.polarity.perf,rows=[['MajorityBaseline','Majority baseline'],['SpatialLogisticRegression','B · Mention flags, logistic'],['SpatialRandomForest','B · Mention flags, random forest'],['C_polarity_logistic','C · Aspect + polarity, logistic'],['C_polarity_forest','C · Aspect + polarity, random forest'],['S_mention_plus_overall_sentiment_forest','Control · mentions + whole-review sentiment, forest'],['TextTFIDFLogisticRegression','TF-IDF logistic (text)']];
+document.getElementById('perf').innerHTML='<tr><th>Model</th><th>AUC</th><th>Macro F1</th><th>Balanced acc.</th><th>Accuracy</th></tr>'+rows.map(r=>{const m=(P[r[0]]||{}).mean_repeated_group_cv||PP[r[0]];return `<tr><td>${r[1]}</td><td>${m.auc.toFixed(3)}</td><td>${m.macro_f1.toFixed(3)}</td><td>${m.balanced_accuracy.toFixed(3)}</td><td>${m.accuracy.toFixed(3)}</td></tr>`}).join('');
+// factor chart
+(function(){const F=[...D.factors].sort((a,b)=>a.frequency_rank-b.frequency_rank);const svg=document.getElementById('fchart');
+ const rowH=34,top=30;let h='';
+ h+=`<text x="10" y="16" font-size="13" fill="#5b6475">Share of 3,884 reviews mentioning the aspect</text><text x="500" y="16" font-size="13" fill="#5b6475">AUC drop when shuffled (logistic, 95% interval)</text>`;
+ const x0=210,sc=2.2; const ix=v=>540+(v+0.012)/0.05*280;
+ h+=`<line x1="${ix(0)}" x2="${ix(0)}" y1="22" y2="${top+9*rowH}" stroke="#aab" stroke-dasharray="3 3"/>`;
+ F.forEach((r,i)=>{const y=top+i*rowH;const c=r.code;
+  h+=`<text x="10" y="${y+19}" font-size="14" fill="#1d2330">${NM[c]}</text>`;
+  h+=`<rect x="${x0}" y="${y+6}" width="${r.mention_percent*sc}" height="18" fill="#9db7e3"/><text x="${x0+r.mention_percent*sc+6}" y="${y+20}" font-size="12.5" fill="#1d2330">${r.mention_percent.toFixed(0)}%</text>`;
+  const lo=ix(r.logistic_ci_low),hi=ix(r.logistic_ci_high),mid=ix(r.logistic_auc_drop);
+  h+=`<line x1="${lo}" x2="${hi}" y1="${y+15}" y2="${y+15}" stroke="#1f5fbf" stroke-width="2"/><circle cx="${mid}" cy="${y+15}" r="5.5" fill="#1f5fbf"/>`;
+  h+=`<text x="850" y="${y+20}" font-size="12" fill="#5b6475">rank ${r.logistic_importance_rank}</text>`;});
+ svg.setAttribute('viewBox',`0 0 900 ${top+9*rowH+10}`);svg.innerHTML=h;})();
+// map
+const st=D.stations;const lat=st.map(s=>s.lat),lng=st.map(s=>s.lng);
+const [la0,la1]=[Math.min(...lat),Math.max(...lat)],[lo0,lo1]=[Math.min(...lng),Math.max(...lng)];
+const sorted=[...st].sort((a,b)=>Number(a.code.slice(2))-Number(b.code.slice(2)));
+const Y=i=>24+i*26.5;let ms=`<line x1="40" x2="40" y1="${Y(0)}" y2="${Y(sorted.length-1)}" stroke="#d9322e" stroke-width="4"/>`;
+sorted.forEach((s,i)=>{const r=4+Math.sqrt(s.model)/2.6;const has=D.cases[s.code];
+ ms+=`<g class="stn" data-c="${s.code}" style="cursor:pointer"><rect x="0" y="${Y(i)-13}" width="300" height="26" fill="transparent"/><circle cx="40" cy="${Y(i)}" r="${r}" fill="${has?'#1f5fbf':'#fff'}" stroke="${has?'#1f5fbf':'#d9322e'}" stroke-width="2"/>
+ <text x="70" y="${Y(i)+4}" font-size="13" fill="#1d2330" font-weight="${has?700:400}">${esc(s.name)} <tspan fill="#8a93a3" font-size="11">${s.code}</tspan></text></g>`;});
+document.getElementById('mapsvg').innerHTML=ms;
+(function(){const Pz=D.polarity,order=['V','Q','L','M','F','T','C','A','D'];const pc=v=>Math.round(v*100)+'%';
+ const h=`<tr><th>Aspect</th><th>Mentioned</th><th>1–3★ when negative</th><th>B logistic</th><th>B forest</th><th>C logistic</th><th>C forest</th></tr>`+order.map(k=>{const fr=D.factors.find(f=>f.code==k),n=Pz.neg[k];
+  return `<tr><td>${NM[k]}</td><td>${fr.mention_percent.toFixed(0)}%</td><td>${n[0]?pc(n[1]/n[0]):'–'} <span style="color:#8a93a3">(${n[1]}/${n[0]})</span></td>${['B_mention_logistic','B_mention_forest','C_polarity_logistic','C_polarity_forest'].map(m=>{const v=Pz.top3[m][k];return `<td style="${v>=.9?'font-weight:700;color:#1f5fbf':''}">${pc(v)}</td>`}).join('')}</tr>`}).join('');
+ document.getElementById('rankt').innerHTML=h;})();
+
+function bar(n,l,m,h){const t=n||1;return `<div class="bar"><i style="width:${l/t*100}%;background:#c0392b"></i><i style="width:${m/t*100}%;background:#c9ced8"></i><i style="width:${h/t*100}%;background:#2e7d5b"></i></div><div class="legend">${l} rated 1–2 · ${m} rated 3 · ${h} rated 4–5 (of ${n})</div>`}
+function show(code){const s=st.find(x=>x.code==code);const c=D.cases[code];
+ let h=`<h3 style="margin:0 0 4px">${esc(s.name)} <small style="color:#5b6475;font-weight:400">${s.code}</small></h3>
+ <div class="legend">${f(s.displayed)} ratings shown · ${f(s.collected)} collected · ${f(s.text)} with text · ${f(s.model)} in model</div>
+ <div style="margin:8px 0">${Object.entries(s.aspects).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k,v])=>`<span class="pill">${NM[k]} ${v}</span>`).join('')}</div>`;
+ if(!c){h+=`<p class="note">No case card. Counts are dictionary mentions, not praise or complaint.</p>`}
+ else{const n=c.neg;
+  h+=`<hr style="border:0;border-top:1px solid #e3e7ee"><span class="tag">Status: review claim / needs site check</span><h3 style="margin:2px 0">${esc(c.theme)}</h3><p style="margin:4px 0">${esc(c.complaint)}</p>
+  <div class="legend" style="margin-top:8px">Reviews mentioning ${c.aspects.split('').map(k=>NM[k].toLowerCase()).join(', ')} (dictionary match):</div>${bar(n.flagged,n.low,n.mid,n.high)}<div class="legend" style="margin:4px 0 8px">${n.flagged} of ${n.station_model} reviews in the model at this station (${Math.round(n.flagged/n.station_model*100)}%) mention these aspects; ${n.low} of the ${n.flagged} (${Math.round(n.low/n.flagged*100)}%) are 1–2★, against ${Math.round(n.station_low/n.station_model*100)}% across all ${n.station_model}. Period: relative dates shown at capture (4 Oct 2026) span from ${n.period.min_months<1?'less than a month':'about '+Math.round(n.period.min_months)+' months'} to about ${Math.round(n.period.max_months/12)} years before capture; ${n.period.within_2y} of ${n.period.dated} dated mentions fall within the last two years.</div>
+  <b style="font-size:14px">Supporting quotations</b>${n.q.map(q=>`<div class="q">“${esc(q.text)}”<small>${q.rating}★ · ${esc(q.when)} · ID ${esc(q.id)}${q.human?' · human-coded: '+esc(q.human):''}</small></div>`).join('')}
+  <b style="font-size:14px">Counter-evidence</b>${c.pos.q.map(q=>`<div class="q p">“${esc(q.text)}”<small>${q.rating}★ · ${esc(q.when)} · ID ${esc(q.id)}</small></div>`).join('')}
+  <p style="margin:10px 0 4px"><b>Proposal.</b> ${esc(c.proposal)}</p><p style="margin:4px 0"><b>How to test.</b> ${esc(c.evaluate)}</p><p class="note" style="margin:6px 0 0">Quotations were retrieved by dictionary match and read by the authors; they were not independently coded unless marked.</p>`}
+ document.getElementById('detail').innerHTML=h;document.querySelectorAll('#mapsvg .stn circle').forEach(e=>e.setAttribute('stroke-width',e.parentNode.dataset.c==code?5:2));}
+document.querySelectorAll('#mapsvg .stn').forEach(g=>g.addEventListener('click',()=>show(g.dataset.c)));
+show('NS24');
+</script></body></html>

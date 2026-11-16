@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NSL MRT：车站空间体验与乘客评分</title>
+<style>
+:root{--blue:#1f5fbf;--ink:#1d2330;--mut:#5b6475;--line:#e3e7ee;--bg:#f6f8fb;--red:#c0392b;--grn:#2e7d5b}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+header{border-top:6px solid var(--blue);padding:36px 0 22px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;color:var(--blue)}h2{font-size:22px;margin:0 0 6px;color:var(--blue)}
+.sub{color:var(--mut);margin:0}section{padding:34px 0;border-top:1px solid var(--line)}
+.lead{color:var(--mut);margin:0 0 16px;max-width:760px}
+.funnel{display:flex;gap:10px;flex-wrap:wrap}.fn{flex:1;min-width:150px;background:var(--bg);border-radius:8px;padding:12px 14px}
+.fn b{display:block;font-size:24px;color:var(--blue)}.fn span{font-size:13px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{color:var(--mut);font-weight:600}
+.note{font-size:13.5px;color:var(--mut);margin-top:10px;max-width:800px}
+#map{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+@media(max-width:760px){#map{grid-template-columns:1fr}}
+#mapsvg{width:100%;height:auto;background:#fff}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:#fff3d6;color:#8a5a00;margin-bottom:6px}
+.q{border-left:3px solid var(--red);padding:2px 0 2px 10px;margin:8px 0;font-size:14.5px}.q.p{border-color:var(--grn)}
+.q small{display:block;color:var(--mut);font-size:12px;word-break:break-all}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;margin:6px 0 2px}.bar i{display:block}
+.legend{font-size:13px;color:var(--mut)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--bg);font-size:13px;margin:2px 4px 2px 0}
+svg text{font-family:inherit}
+footer{padding:26px 0 50px;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}
+button.stn{cursor:pointer}
+</style></head><body>
+<div class="w"><header>
+<h1>哪些车站空间体验与乘客评分有关？</h1>
+<p class="sub">新加坡南北线（27 站）· 2026 年 10 月 4 日抓取的 Google 地图评论 · BPS5231 · 王宇律、张欣悦</p>
+</header>
+
+<section><h2>1. 数据</h2>
+<p class="lead">按从新到旧收集了全部 27 个站的评论。大多数记录只有星级没有文字；模型使用其中 3,884 条提到车站空间方面的文字评论。</p>
+<div class="funnel" id="funnel"></div>
+<p class="note">26 个站收集到的条数与平台显示总数一致；油池站显示 146 条，收集到 145 条。网上评论者是自我选择的，不是乘客的随机样本。</p></section>
+
+<section><h2>2. 提得最多的，不一定最能预测评分</h2>
+<p class="lead">左：各方面被提及的比例。右：把该方面打乱后，留出站上的 AUC 下降多少（只看提及的逻辑回归，按站 bootstrap 的 95% 区间）。在这个模型里，垂直交通（V）很少被提及却排第 2，清洁（Q）正好相反。下表显示这些排名换了模型是否还成立。</p>
+<svg id="fchart" viewBox="0 0 900 360" width="100%"></svg>
+<p class="note">这里的重要性指拟合模型对该特征的依赖，不代表改造空间能带来的收益。负值或接近零只说明打乱后没有损害这个模型的预测，不代表这个问题实际上不重要。逻辑回归和随机森林给出的排序也不同。</p>
+<h3 style="font-size:17px;margin:22px 0 4px">排序有多稳定？</h3><p class="lead" style="margin-bottom:8px">在 300 次按站重抽样中，各方面排进前三的比例；B 为只看提及的模型，C 为提及加正负的模型。另列出负面提及中 1–3 星的比例（全部评论为 20%）。</p><table id="rankt"></table><p class="note">站城连接（C）和设施（A）在所有模型里都排进前三。垂直交通（V）只在只看提及的逻辑回归里稳定；加入正负后清洁（Q）升到第一，因为“干净 / 脏”本身带情绪。正负由固定规则判断（见第 5 节）。重抽样使用固定的折外预测。</p></section>
+
+<section><h2>3. 空间特征是否包含评分信息？</h2>
+<p class="lead">所有模型都在整站留出的数据上评估（按站分组 5 折，三个随机种子，实际形成两种不同的划分）。高分占样本 80%，只看准确率会误导，所以同时给出 macro F1 和 AUC。</p>
+<table id="perf"></table>
+<p class="note">加入正负（C）后，AUC 比只看提及高约 0.11–0.13（按站 bootstrap 区间在 0 以上）；但“提及加整条评论情绪”的对照模型还略高一些。所以用这套规则，不能说明知道“哪个方面被夸或被骂”比整条评论的语气多提供了信息。</p><p class="note">AUC 是排序指标，不是准确率百分比。空间提及标记包含的信息有限；文本模型更强，但它也利用了一般的情感词，所以只作为对照，不能用来诊断物理原因。提及标记只记录某方面被提到，不区分是称赞还是批评。</p></section>
+
+<section><h2>4. 车站地图与证据卡</h2>
+<p class="lead">点选一个车站。有三个站配有案例卡，列出反复出现的投诉、反面证据和候选改进。车站从北到南排列；圆圈大小表示进入模型的文字评论数量。</p>
+<div id="map"><svg id="mapsvg" viewBox="0 0 300 740"></svg><div id="detail" class="card"></div></div>
+<p class="note">案例选择：选的是在建模语料里某方面低分提及较多的站。引用的评论由词典检索、作者阅读，没有经过独立编码。评论日期是抓取时（2026 年 10 月 4 日）平台显示的相对日期。案例卡是基于评论的说法，没有做过现场走访或实地检查，所以每条建议都只是有待现场核实的候选。</p></section>
+
+<section><h2>5. 标签核查到什么程度</h2>
+<ul>
+<li>模型里的方面编码用的是固定的中英文关键词词典，分不出称赞和投诉。</li>
+<li>一个 AI 在隐藏星级的情况下读了 200 条分层抽样的评论：90 条车站空间、22 条不确定、88 条其他。这些数字不代表总体比例。在“是否车站空间”上，词典与 AI 在 160 条中一致 61 + 68 条（约 81%）；单个方面的检出较弱（例如连接性：AI 判为提及的 32 条中，词典找到 15 条）。</li>
+<li>独立人工编码：两位作者在隐藏星级、讨论之前各自标注同样的评论。第一轮（60 条，编码手册 v1）：范围 κ = 0.26，方面提及 κ = 0.47（9 个方面 × 60）。修订并冻结编码手册（v2）后，第二轮用 40 条新评论：范围 κ = 0.77，方面提及 κ = 0.67。之后两人共同裁决了全部 100 条。</li>
+<li>模型使用的词典标签已与 100 条人工裁决标签对比。是否车站空间：精确率 0.77，召回率 0.82（κ = 0.45）。提到哪些方面（9 × 100 个判断）：精确率 0.49，召回率 0.61（κ = 0.49）；多标最多的是设施（A）和步行路径（M）。</li>
+<li>方面正负由固定规则判断：先在 AI 开发集上检查，再用 100 条人工裁决标签只测一次。54 个评论-方面中一致率 0.63，κ = 0.34；规则能找出 84% 的投诉，但只找出 25% 的称赞。</li>
+<li>早期 224 条的试点：去掉其中 13 条非空间评论后，F1 从 0.634 变为 0.623，AUC 从 0.736 变为 0.712（各重复五次）；连接性、设施和垂直交通仍是前三。</li>
+<li>前瞻检验：冻结编码手册、规则和模型（用其余 26 个站训练）后，我们采集了 Woodlands 在 10 月 4 日之后新发布的 36 条评论。其中只有 4 条有文字且提到车站空间方面，全部为 4–5 星；每个冻结模型都判对 3 条。流程能在新评论上运行，但样本太少，无法估计性能。Woodlands 的旧评论在开发阶段被看过。</li>
+</ul></section>
+<footer>车站经营小游戏：<a href="game_zh.html">开始游戏</a>（<a href="game_en.html">English</a>）· 本页英文版：<a href="results_site.html">English</a>。<br>代码、数据和结果：<a href="https://github.com/mokscreate/assignment-5231">github.com/mokscreate/assignment-5231</a>。模型预测的是发布的星级，不是乘客福祉；相关不等于因果。编码、分析脚本和本页面使用了 AI 辅助。</footer>
+</div>
+<script>
+const D=__DATA__;
+const NM={C:'站城连接',M:'步行与换乘路径',F:'导向与标识',V:'垂直交通/无障碍',D:'拥挤/人流',T:'热舒适/空气',Q:'清洁/维护',A:'设施/停留支持',L:'照明/空间氛围'};const Z=D.zh||{};const tq=(c,q)=>{const z=(Z[c]||{}).q||{};const t=z[q.id.slice(-8)];return t?`<div class="legend" style="color:#6b6b55">参考译文：${esc(t)}</div>`:''};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const f=n=>n.toLocaleString('en-US');
+// funnel
+const S=D.screening;
+document.getElementById('funnel').innerHTML=[[21796,'条评分记录，27 个站'],[7636,'条有文字'],[3884,'条进入模型（去重并筛选方面后）'],[3117,'条为 4–5 星（80%）']]
+ .map(a=>`<div class="fn"><b>${f(a[0])}</b><span>${a[1]}</span></div>`).join('');
+// perf
+const P=D.perf,PP=D.polarity.perf,rows=[['MajorityBaseline','多数类基线'],['SpatialLogisticRegression','B · 只看提及，逻辑回归'],['SpatialRandomForest','B · 只看提及，随机森林'],['C_polarity_logistic','C · 提及加正负，逻辑回归'],['C_polarity_forest','C · 提及加正负，随机森林'],['S_mention_plus_overall_sentiment_forest','对照 · 提及加整条评论情绪，随机森林'],['TextTFIDFLogisticRegression','TF-IDF 逻辑回归（文本）']];
+document.getElementById('perf').innerHTML='<tr><th>模型</th><th>AUC</th><th>Macro F1</th><th>平衡准确率</th><th>准确率</th></tr>'+rows.map(r=>{const m=(P[r[0]]||{}).mean_repeated_group_cv||PP[r[0]];return `<tr><td>${r[1]}</td><td>${m.auc.toFixed(3)}</td><td>${m.macro_f1.toFixed(3)}</td><td>${m.balanced_accuracy.toFixed(3)}</td><td>${m.accuracy.toFixed(3)}</td></tr>`}).join('');
+// factor chart
+(function(){const F=[...D.factors].sort((a,b)=>a.frequency_rank-b.frequency_rank);const svg=document.getElementById('fchart');
+ const rowH=34,top=30;let h='';
+ h+=`<text x="10" y="16" font-size="13" fill="#5b6475">3,884 条评论中提及该方面的比例</text><text x="500" y="16" font-size="13" fill="#5b6475">打乱后 AUC 的下降（逻辑回归，95% 区间）</text>`;
+ const x0=210,sc=2.2; const ix=v=>540+(v+0.012)/0.05*280;
+ h+=`<line x1="${ix(0)}" x2="${ix(0)}" y1="22" y2="${top+9*rowH}" stroke="#aab" stroke-dasharray="3 3"/>`;
+ F.forEach((r,i)=>{const y=top+i*rowH;const c=r.code;
+  h+=`<text x="10" y="${y+19}" font-size="14" fill="#1d2330">${NM[c]}</text>`;
+  h+=`<rect x="${x0}" y="${y+6}" width="${r.mention_percent*sc}" height="18" fill="#9db7e3"/><text x="${x0+r.mention_percent*sc+6}" y="${y+20}" font-size="12.5" fill="#1d2330">${r.mention_percent.toFixed(0)}%</text>`;
+  const lo=ix(r.logistic_ci_low),hi=ix(r.logistic_ci_high),mid=ix(r.logistic_auc_drop);
+  h+=`<line x1="${lo}" x2="${hi}" y1="${y+15}" y2="${y+15}" stroke="#1f5fbf" stroke-width="2"/><circle cx="${mid}" cy="${y+15}" r="5.5" fill="#1f5fbf"/>`;
+  h+=`<text x="850" y="${y+20}" font-size="12" fill="#5b6475">第 ${r.logistic_importance_rank} 名</text>`;});
+ svg.setAttribute('viewBox',`0 0 900 ${top+9*rowH+10}`);svg.innerHTML=h;})();
+// map
+const st=D.stations;const lat=st.map(s=>s.lat),lng=st.map(s=>s.lng);
+const [la0,la1]=[Math.min(...lat),Math.max(...lat)],[lo0,lo1]=[Math.min(...lng),Math.max(...lng)];
+const sorted=[...st].sort((a,b)=>Number(a.code.slice(2))-Number(b.code.slice(2)));
+const Y=i=>24+i*26.5;let ms=`<line x1="40" x2="40" y1="${Y(0)}" y2="${Y(sorted.length-1)}" stroke="#d9322e" stroke-width="4"/>`;
+sorted.forEach((s,i)=>{const r=4+Math.sqrt(s.model)/2.6;const has=D.cases[s.code];
+ ms+=`<g class="stn" data-c="${s.code}" style="cursor:pointer"><rect x="0" y="${Y(i)-13}" width="300" height="26" fill="transparent"/><circle cx="40" cy="${Y(i)}" r="${r}" fill="${has?'#1f5fbf':'#fff'}" stroke="${has?'#1f5fbf':'#d9322e'}" stroke-width="2"/>
+ <text x="70" y="${Y(i)+4}" font-size="13" fill="#1d2330" font-weight="${has?700:400}">${esc(s.name)} <tspan fill="#8a93a3" font-size="11">${s.code}</tspan></text></g>`;});
+document.getElementById('mapsvg').innerHTML=ms;
+(function(){const Pz=D.polarity,order=['V','Q','L','M','F','T','C','A','D'];const pc=v=>Math.round(v*100)+'%';
+ const h=`<tr><th>方面</th><th>提及比例</th><th>负面提及中 1–3★</th><th>B 逻辑回归</th><th>B 随机森林</th><th>C 逻辑回归</th><th>C 随机森林</th></tr>`+order.map(k=>{const fr=D.factors.find(f=>f.code==k),n=Pz.neg[k];
+  return `<tr><td>${NM[k]}</td><td>${fr.mention_percent.toFixed(0)}%</td><td>${n[0]?pc(n[1]/n[0]):'–'} <span style="color:#8a93a3">(${n[1]}/${n[0]})</span></td>${['B_mention_logistic','B_mention_forest','C_polarity_logistic','C_polarity_forest'].map(m=>{const v=Pz.top3[m][k];return `<td style="${v>=.9?'font-weight:700;color:#1f5fbf':''}">${pc(v)}</td>`}).join('')}</tr>`}).join('');
+ document.getElementById('rankt').innerHTML=h;})();
+
+function bar(n,l,m,h){const t=n||1;return `<div class="bar"><i style="width:${l/t*100}%;background:#c0392b"></i><i style="width:${m/t*100}%;background:#c9ced8"></i><i style="width:${h/t*100}%;background:#2e7d5b"></i></div><div class="legend">1–2 星 ${l} 条 · 3 星 ${m} 条 · 4–5 星 ${h} 条（共 ${n} 条）</div>`}
+function show(code){const s=st.find(x=>x.code==code);const c=D.cases[code];
+ let h=`<h3 style="margin:0 0 4px">${esc(s.name)} <small style="color:#5b6475;font-weight:400">${s.code}</small></h3>
+ <div class="legend">平台显示 ${f(s.displayed)} 条评分 · 收集 ${f(s.collected)} 条 · 有文字 ${f(s.text)} 条 · 进入模型 ${f(s.model)} 条</div>
+ <div style="margin:8px 0">${Object.entries(s.aspects).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k,v])=>`<span class="pill">${NM[k]} ${v}</span>`).join('')}</div>`;
+ if(!c){h+=`<p class="note">没有案例卡。数字是词典提及次数，不区分称赞或投诉。</p>`}
+ else{const n=c.neg;
+  h+=`<hr style="border:0;border-top:1px solid #e3e7ee"><span class="tag">状态：评论说法 / 需现场核实</span><h3 style="margin:2px 0">${esc((Z[code]||c).theme)}</h3><p style="margin:4px 0">${esc((Z[code]||c).complaint)}</p>
+  <div class="legend" style="margin-top:8px">提及${c.aspects.split('').map(k=>NM[k]).join('、')}的评论（词典匹配）：</div>${bar(n.flagged,n.low,n.mid,n.high)}<div class="legend" style="margin:4px 0 8px">该站进入模型的 ${n.station_model} 条评论中，${n.flagged} 条（${Math.round(n.flagged/n.station_model*100)}%）提到这些方面；其中 ${n.low} 条（${Math.round(n.low/n.flagged*100)}%）为 1–2★，而全站 ${n.station_model} 条中 1–2★ 占 ${Math.round(n.station_low/n.station_model*100)}%。时间段：抓取时（2026-10-04）显示的相对日期从${n.period.min_months<1?'不到一个月':'约 '+Math.round(n.period.min_months)+' 个月'}前到约 ${Math.round(n.period.max_months/12)} 年前；${n.period.dated} 条中有 ${n.period.within_2y} 条在近两年内。</div>
+  <b style="font-size:14px">支持性引用</b>${n.q.map(q=>`<div class="q">“${esc(q.text)}”<small>${q.rating}★ · ${esc(q.when)} · ID ${esc(q.id)}${q.human?' · 人工编码：'+esc(q.human):''}</small>${tq(code,q)}</div>`).join('')}
+  <b style="font-size:14px">反面证据</b>${c.pos.q.map(q=>`<div class="q p">“${esc(q.text)}”<small>${q.rating}★ · ${esc(q.when)} · ID ${esc(q.id)}</small>${tq(code,q)}</div>`).join('')}
+  <p style="margin:10px 0 4px"><b>建议。</b> ${esc((Z[code]||c).proposal)}</p><p style="margin:4px 0"><b>如何检验。</b> ${esc((Z[code]||c).evaluate)}</p><p class="note" style="margin:6px 0 0">引用的评论由词典检索、作者阅读；除非另有标注，没有经过独立编码。评论保留英文原文，译文仅供参考。</p>`}
+ document.getElementById('detail').innerHTML=h;document.querySelectorAll('#mapsvg .stn circle').forEach(e=>e.setAttribute('stroke-width',e.parentNode.dataset.c==code?5:2));}
+document.querySelectorAll('#mapsvg .stn').forEach(g=>g.addEventListener('click',()=>show(g.dataset.c)));
+show('NS24');
+</script></body></html>

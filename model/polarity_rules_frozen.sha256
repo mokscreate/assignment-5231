@@ -1,0 +1,3 @@
+Polarity rules frozen 2026-11-16 after checking on the 200-record AI development set and before the single test against the 100 human-adjudicated records.
+Later edits to polarity.py only added the overall-sentiment control model; re-running --validate reproduces the same test result (n 54, raw 0.630, kappa 0.336).
+sha256 of polarity.py at freeze: da8851e1ed211cce0736b081e54abdd7d357e58b2e1ea0c384f7acd9dc6d728e

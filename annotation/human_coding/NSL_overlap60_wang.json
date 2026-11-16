@@ -1,0 +1,1149 @@
+{
+  "schema": "nsl-overlap60-v1",
+  "coder_id": "wang",
+  "exported_at": "2026-11-15T14:24:16.973Z",
+  "n_complete": 60,
+  "n_total": 60,
+  "records": [
+    {
+      "overlap_id": "H01",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN3cjltMDRBRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:07:48.399Z"
+    },
+    {
+      "overlap_id": "H02",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtb3B2bk1BEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:07:53.662Z"
+    },
+    {
+      "overlap_id": "H03",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURvNWIyS3dnRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "positive",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:08:07.463Z"
+    },
+    {
+      "overlap_id": "H04",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURPOGRuOHZBRRAB",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:08:12.205Z"
+    },
+    {
+      "overlap_id": "H05",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNLLW91bTdRRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "negative",
+        "Q": "negative",
+        "A": "negative",
+        "L": "negative"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:08:34.713Z"
+    },
+    {
+      "overlap_id": "H06",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQteDl5aXdnRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "negative",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:08:54.432Z"
+    },
+    {
+      "overlap_id": "H07",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25oSFpIZzFhVVl5Ym1wRFlsQnVSM0ZGWXpaRFRYYxAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:04.790Z"
+    },
+    {
+      "overlap_id": "H08",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR4Z3M2MThnRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:09.309Z"
+    },
+    {
+      "overlap_id": "H09",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN5XzVLYi1BRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "positive",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:16.895Z"
+    },
+    {
+      "overlap_id": "H10",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUMwdDh5WU13EAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:20.950Z"
+    },
+    {
+      "overlap_id": "H11",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR1a2MyUGd3RRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "positive",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:16.494Z"
+    },
+    {
+      "overlap_id": "H12",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtaDUzU0hREAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:21.611Z"
+    },
+    {
+      "overlap_id": "H13",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQyNnR1R2h3RRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:28.161Z"
+    },
+    {
+      "overlap_id": "H14",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURiaVlLeDF3RRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "mixed",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:38.979Z"
+    },
+    {
+      "overlap_id": "H15",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURoMTR1bk9nEAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:44.635Z"
+    },
+    {
+      "overlap_id": "H16",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUMtaThidVFnEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:47.439Z"
+    },
+    {
+      "overlap_id": "H17",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURQajlMZlFnEAE",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "negative",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:54.101Z"
+    },
+    {
+      "overlap_id": "H18",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnTUNBMHM3d0VBEAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:19:57.667Z"
+    },
+    {
+      "overlap_id": "H19",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBdWVHU093EAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:20:02.961Z"
+    },
+    {
+      "overlap_id": "H20",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNHNnJINnV3RRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:20:06.432Z"
+    },
+    {
+      "overlap_id": "H21",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURReXByc3RnRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:32.432Z"
+    },
+    {
+      "overlap_id": "H22",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNCcWR5b21BRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:09:53.319Z"
+    },
+    {
+      "overlap_id": "H23",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQwbU56c2pBRRAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:15.921Z"
+    },
+    {
+      "overlap_id": "H24",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtdmEyUUxnEAE",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:13.186Z"
+    },
+    {
+      "overlap_id": "H25",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURVdzdXMC13RRAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:26.219Z"
+    },
+    {
+      "overlap_id": "H26",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURRdmVEbGVnEAE",
+      "complete": true,
+      "scope": "train_interior",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:31.401Z"
+    },
+    {
+      "overlap_id": "H27",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2kwd1VtTTRXakp1TUV0Q1prcFpZWHBrY0VWa1QwRRAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:36.374Z"
+    },
+    {
+      "overlap_id": "H28",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNkNjktTmVREAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:43.064Z"
+    },
+    {
+      "overlap_id": "H29",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25abFNUVkpVbWx6VFRObWFtUmxjMUZhZEhkQlFWRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:11:55.983Z"
+    },
+    {
+      "overlap_id": "H30",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN4cmNYUzlRRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:12:11.503Z"
+    },
+    {
+      "overlap_id": "H31",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURzNU8tTWVnEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "negative",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:20:20.561Z"
+    },
+    {
+      "overlap_id": "H32",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNPd3FXY2RBEAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:20:25.318Z"
+    },
+    {
+      "overlap_id": "H33",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCQlozcGlPR0pKUjJ4MlpIbEZhMUJsZEhsdGEyYxAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "negative",
+        "V": "absent",
+        "D": "neutral",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:20:49.034Z"
+    },
+    {
+      "overlap_id": "H34",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNOOHZhV1Z3EAE",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "mixed",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:21:08.778Z"
+    },
+    {
+      "overlap_id": "H35",
+      "review_id": "ChRDSUhNMG9nS0VJQ0FnSUNhcVo5aBAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "negative",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:23:26.220Z"
+    },
+    {
+      "overlap_id": "H36",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25salVFYzRjblJ4VEV0Tk9GRkZUVVJ4TTFwemIzYxAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "positive",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:23:33.881Z"
+    },
+    {
+      "overlap_id": "H37",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNnbF9IcHRBRRAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:23:39.648Z"
+    },
+    {
+      "overlap_id": "H38",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25SUmJGUkRZbkJNYkRaYVJFY3phREZZYVVGR1JrRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:23:42.749Z"
+    },
+    {
+      "overlap_id": "H39",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURqNVBiekxnEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "negative",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:23:55.007Z"
+    },
+    {
+      "overlap_id": "H40",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURwc2Nmai13RRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:24:08.121Z"
+    },
+    {
+      "overlap_id": "H41",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNSejZUVGNBEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:18.535Z"
+    },
+    {
+      "overlap_id": "H42",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21Rd2JEUTNZMGMzUm5ZMU5VMUpha2syZEVscVVIYxAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:24.229Z"
+    },
+    {
+      "overlap_id": "H43",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNCbnVDbkN3EAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:40.278Z"
+    },
+    {
+      "overlap_id": "H44",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURPck1yRnRRRRAB",
+      "complete": true,
+      "scope": "unclear",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:47.264Z"
+    },
+    {
+      "overlap_id": "H45",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURoeFlXNHpnRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:50.691Z"
+    },
+    {
+      "overlap_id": "H46",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25FMFh6Y3hjVTFpVEhkd1ozVlZjMVp5VG5oQlptYxAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "negative",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:16:56.297Z"
+    },
+    {
+      "overlap_id": "H47",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNCa3FubDFnRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:00.211Z"
+    },
+    {
+      "overlap_id": "H48",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR4Z2VpaTRBRRAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:06.914Z"
+    },
+    {
+      "overlap_id": "H49",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNpMWZ1RDhBRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "neutral",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:20.123Z"
+    },
+    {
+      "overlap_id": "H50",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURaaVB5NVFBEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "negative",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:31.925Z"
+    },
+    {
+      "overlap_id": "H51",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNBNm9feElBEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:46.551Z"
+    },
+    {
+      "overlap_id": "H52",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURCc2N6M1JnEAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:50.998Z"
+    },
+    {
+      "overlap_id": "H53",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURHdzZDNjVnRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "positive",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:17:57.401Z"
+    },
+    {
+      "overlap_id": "H54",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNnOGRuVkp3EAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:02.058Z"
+    },
+    {
+      "overlap_id": "H55",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNJanFfTnZ3RRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:07.549Z"
+    },
+    {
+      "overlap_id": "H56",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNjczdhcFZBEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:11.698Z"
+    },
+    {
+      "overlap_id": "H57",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNOcV9DZ19RRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "negative",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:31.243Z"
+    },
+    {
+      "overlap_id": "H58",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xjNVZGVmtabGc1TkdSd09UQm1ZM0pqZG5wUFZYYxAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "negative",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:38.390Z"
+    },
+    {
+      "overlap_id": "H59",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR6MDk2dm9RRRAB",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:47.474Z"
+    },
+    {
+      "overlap_id": "H60",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUMtd083OTVRRRAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "updated_at": "2026-11-15T14:18:54.057Z"
+    }
+  ]
+}

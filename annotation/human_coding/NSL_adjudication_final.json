@@ -1,0 +1,1923 @@
+{
+ "schema": "nsl-adjudication-v1",
+ "codebook": "v2",
+ "exported_at": "2026-11-16T07:23:26.913Z",
+ "rounds": {
+  "round1": [
+   {
+    "overlap_id": "H01",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN3cjltMDRBRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "negative",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 5: ageing fixed facility is Q",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "H02",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtb3B2bk1BEAE",
+    "disagreed": true,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H03",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURvNWIyS3dnRRAB",
+    "disagreed": true,
+    "scope": "surroundings_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H04",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURPOGRuOHZBRRAB",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H05",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNLLW91bTdRRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "negative",
+     "Q": "negative",
+     "A": "negative",
+     "L": "negative"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H06",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQteDl5aXdnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "negative",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H07",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25oSFpIZzFhVVl5Ym1wRFlsQnVSM0ZGWXpaRFRYYxAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H08",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR4Z3M2MThnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H09",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN5XzVLYi1BRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "positive",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H10",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUMwdDh5WU13EAE",
+    "disagreed": true,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H11",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR1a2MyUGd3RRAB",
+    "disagreed": true,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H12",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtaDUzU0hREAE",
+    "disagreed": true,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H13",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQyNnR1R2h3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H14",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURiaVlLeDF3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "mixed",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H15",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURoMTR1bk9nEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H16",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUMtaThidVFnEAE",
+    "disagreed": true,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H17",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURQajlMZlFnEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "negative",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H18",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnTUNBMHM3d0VBEAE",
+    "disagreed": true,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H19",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBdWVHU093EAE",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H20",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNHNnJINnV3RRAB",
+    "disagreed": false,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H21",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURReXByc3RnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H22",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNCcWR5b21BRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H23",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUQwbU56c2pBRRAB",
+    "disagreed": true,
+    "scope": "surroundings_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H24",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtdmEyUUxnEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 2: proximity to destination is C",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "H25",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURVdzdXMC13RRAB",
+    "disagreed": true,
+    "scope": "surroundings_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H26",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURRdmVEbGVnEAE",
+    "disagreed": false,
+    "scope": "train_interior",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H27",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2kwd1VtTTRXakp1TUV0Q1prcFpZWHBrY0VWa1QwRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "neutral",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 2: proximity/gateway is C",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "H28",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNkNjktTmVREAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H29",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25abFNUVkpVbWx6VFRObWFtUmxjMUZhZEhkQlFWRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H30",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN4cmNYUzlRRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H31",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURzNU8tTWVnEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "negative",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H32",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNPd3FXY2RBEAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H33",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCQlozcGlPR0pKUjJ4MlpIbEZhMUJsZEhsdGEyYxAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "negative",
+     "V": "absent",
+     "D": "neutral",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H34",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNOOHZhV1Z3EAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "mixed",
+     "M": "absent",
+     "F": "absent",
+     "V": "negative",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H35",
+    "review_id": "ChRDSUhNMG9nS0VJQ0FnSUNhcVo5aBAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "negative",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H36",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25salVFYzRjblJ4VEV0Tk9GRkZUVVJ4TTFwemIzYxAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "positive",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H37",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNnbF9IcHRBRRAB",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H38",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25SUmJGUkRZbkJNYkRaYVJFY3phREZZYVVGR1JrRRAB",
+    "disagreed": true,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H39",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURqNVBiekxnEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H40",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURwc2Nmai13RRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: platform capacity vs traffic is D, not amenity",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "H41",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNSejZUVGNBEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H42",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21Rd2JEUTNZMGMzUm5ZMU5VMUpha2syZEVscVVIYxAB",
+    "disagreed": true,
+    "scope": "surroundings_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H43",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNCbnVDbkN3EAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H44",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURPck1yRnRRRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H45",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURoeFlXNHpnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H46",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25FMFh6Y3hjVTFpVEhkd1ozVlZjMVp5VG5oQlptYxAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "negative",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H47",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNCa3FubDFnRRAB",
+    "disagreed": true,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H48",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR4Z2VpaTRBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "neutral",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 2: connection to destination/bus is C",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "H49",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNpMWZ1RDhBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H50",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURaaVB5NVFBEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "negative",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H51",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNBNm9feElBEAE",
+    "disagreed": true,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H52",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURCc2N6M1JnEAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H53",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURHdzZDNjVnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "positive",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H54",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNnOGRuVkp3EAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H55",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNJanFfTnZ3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H56",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNjczdhcFZBEAE",
+    "disagreed": true,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H57",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNOcV9DZ19RRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "absent",
+     "V": "negative",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H58",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xjNVZGVmtabGc1TkdSd09UQm1ZM0pqZG5wUFZYYxAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "absent",
+     "V": "negative",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H59",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR6MDk2dm9RRRAB",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "H60",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUMtd083OTVRRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   }
+  ],
+  "round2": [
+   {
+    "overlap_id": "S01",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNOc3Z1NzNRRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "negative",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S02",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURXazR5V2ZnEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S03",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNSd19iM2dnRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "negative",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 5; no amenity mentioned",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S04",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNSZ0tXWXZBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "negative",
+     "Q": "negative",
+     "A": "negative",
+     "L": "negative"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S05",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNZdE9EdWRnEAE",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S06",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnTUNvMjRmaFJ3EAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S07",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNReWVLZkh3EAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "negative",
+     "F": "absent",
+     "V": "negative",
+     "D": "negative",
+     "T": "negative",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: \"Platform A\" is a platform name; escalator/stair layout is V, moving along platform is M",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S08",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUN3OVpQMUdnEAE",
+    "disagreed": true,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S09",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25KTVFuUnRhRTlZZG5RM1FUWjVTV0ZQYmxWSlZXYxAB",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S10",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtaVk3b0hBEAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "negative",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "negative",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S11",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pVeVlWWnpkek0wWWkxTFZHNHhWRFJKVm01WWIyYxAB",
+    "disagreed": false,
+    "scope": "train_interior",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S12",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURCdi1pTDhBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 2: near malls is C",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S13",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURHM3BQZ3dBRRAB",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S14",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNDbWNMRUN3EAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S15",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURweTlDOHd3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S16",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBbjd2dVV3EAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "neutral",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S17",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN3d1l2ZDl3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S18",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNQcU5PUklnEAE",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S19",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNxemVDVzNBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: no amenity mentioned",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S20",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNucXVmQ2p3RRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: confusing platform assignment is wayfinding (F)",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S21",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNPeXVPa3BRRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "negative"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S22",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBM3RMX1NREAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "positive",
+     "F": "absent",
+     "V": "absent",
+     "D": "mixed",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S23",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNIajZ1Z3lRRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "neutral",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S24",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNnMllUVVpBEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S25",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR1a0xxbHpBRRAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S26",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURBZ2ZMZ25RRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "positive",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S27",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tvMFVVRkZkV05WZVMxQ1ZuVkhXREJYY25aUVZXYxAB",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S28",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURZMU5Md2JBEAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S29",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNCbEpiMmNnEAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S30",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSURLNXVDQ3ZBRRAB",
+    "disagreed": false,
+    "scope": "station_operations_only",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S31",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNBOTdqN1lnEAE",
+    "disagreed": true,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S32",
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tvMFdtSnZRa3QwTVRaZllrMWhVVE5zY21OdVYyYxAB",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "Revised 2026-11-16: v2 rule 2: mall next to station is C",
+    "status": "ok",
+    "revised": true
+   },
+   {
+    "overlap_id": "S33",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNabXQzcWF3EAE",
+    "disagreed": true,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "negative",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S34",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQwOFkydENREAE",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S35",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtLVpUTk1BEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "positive",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S36",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNJd3VEdnpBRRAB",
+    "disagreed": false,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S37",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNndFlYc0x3EAE",
+    "disagreed": false,
+    "scope": "generic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S38",
+    "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNnOWVHbC1RRRAB",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "negative",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S39",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURZeGUtTkVnEAE",
+    "disagreed": false,
+    "scope": "station_spatial",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   },
+   {
+    "overlap_id": "S40",
+    "review_id": "ChZDSUhNMG9nS0VJQ0FnSURCcjRxT2Z3EAE",
+    "disagreed": true,
+    "scope": "off_topic",
+    "aspects": {
+     "C": "absent",
+     "M": "absent",
+     "F": "absent",
+     "V": "absent",
+     "D": "absent",
+     "T": "absent",
+     "Q": "absent",
+     "A": "absent",
+     "L": "absent"
+    },
+    "note": "",
+    "status": "ok"
+   }
+  ]
+ },
+ "revision": "2026-11-16: 11 records revised by Wang Yulu to apply codebook v2 consistently (see adjudication_revisions.json); original export kept in NSL_adjudication.json"
+}

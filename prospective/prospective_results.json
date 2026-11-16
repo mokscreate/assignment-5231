@@ -1,0 +1,106 @@
+{
+  "station": "Woodlands",
+  "screening": {
+    "captured": 36,
+    "already_in_corpus": 0,
+    "rating_only": 26,
+    "duplicate_text": 2,
+    "no_spatial_match": 4,
+    "included": 4
+  },
+  "new_rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 4,
+    "4": 5,
+    "5": 27
+  },
+  "results": {
+    "B_mention_logistic": {
+      "n": 4,
+      "high": 4,
+      "low": 0,
+      "correct": 3,
+      "accuracy": 0.75,
+      "balanced_accuracy": null,
+      "macro_f1": 0.42857142857142855,
+      "auc": null,
+      "low_correctly_flagged": 0
+    },
+    "B_mention_forest": {
+      "n": 4,
+      "high": 4,
+      "low": 0,
+      "correct": 3,
+      "accuracy": 0.75,
+      "balanced_accuracy": null,
+      "macro_f1": 0.42857142857142855,
+      "auc": null,
+      "low_correctly_flagged": 0
+    },
+    "C_polarity_logistic": {
+      "n": 4,
+      "high": 4,
+      "low": 0,
+      "correct": 3,
+      "accuracy": 0.75,
+      "balanced_accuracy": null,
+      "macro_f1": 0.42857142857142855,
+      "auc": null,
+      "low_correctly_flagged": 0
+    },
+    "C_polarity_forest": {
+      "n": 4,
+      "high": 4,
+      "low": 0,
+      "correct": 3,
+      "accuracy": 0.75,
+      "balanced_accuracy": null,
+      "macro_f1": 0.42857142857142855,
+      "auc": null,
+      "low_correctly_flagged": 0
+    }
+  },
+  "per_review": [
+    {
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tKdWVtOVJkamRoYm01dFlrbGtNbE5qVlZNelJYYxAB",
+      "rating": 5,
+      "displayed_date": "17 hours ago",
+      "aspects": "QL",
+      "B_mention_logistic": 0.622,
+      "B_mention_forest": 0.636,
+      "C_polarity_logistic": 0.853,
+      "C_polarity_forest": 0.724
+    },
+    {
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25ZM1JrMXdOMUJWTkMwdGIydG5RVVp0VmxaTWRXYxAB",
+      "rating": 5,
+      "displayed_date": "a month ago",
+      "aspects": "Q",
+      "B_mention_logistic": 0.509,
+      "B_mention_forest": 0.615,
+      "C_polarity_logistic": 0.74,
+      "C_polarity_forest": 0.737
+    },
+    {
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xKSFEzTnFSWFo1VVhreGRHVTVUbmN4UnpaTFUyYxAB",
+      "rating": 4,
+      "displayed_date": "a month ago",
+      "aspects": "CQA",
+      "B_mention_logistic": 0.739,
+      "B_mention_forest": 0.741,
+      "C_polarity_logistic": 0.936,
+      "C_polarity_forest": 0.816
+    },
+    {
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25SV1VXRlVaRU01U25sNVdERnJaMmhETFVRMmRYYxAB",
+      "rating": 5,
+      "displayed_date": "a month ago",
+      "aspects": "F",
+      "B_mention_logistic": 0.379,
+      "B_mention_forest": 0.298,
+      "C_polarity_logistic": 0.275,
+      "C_polarity_forest": 0.337
+    }
+  ]
+}

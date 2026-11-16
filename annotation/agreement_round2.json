@@ -1,0 +1,295 @@
+{
+  "round": "round2",
+  "coders": [
+    "Wang",
+    "Zhang"
+  ],
+  "exported_at": [
+    "2026-11-16T06:55:34.148Z",
+    "2026-11-16T07:00:44.327Z"
+  ],
+  "n_records_both_complete": 40,
+  "incomplete_or_missing": [],
+  "scope_7class": {
+    "n": 40,
+    "raw_agreement": 0.85,
+    "cohen_kappa": 0.7678916827852997,
+    "counts_coder1": {
+      "station_spatial": 22,
+      "station_operations_only": 4,
+      "generic": 2,
+      "off_topic": 9,
+      "train_interior": 1,
+      "surroundings_only": 2
+    },
+    "counts_coder2": {
+      "station_spatial": 21,
+      "station_operations_only": 3,
+      "generic": 4,
+      "off_topic": 9,
+      "train_interior": 1,
+      "surroundings_only": 1,
+      "unclear": 1
+    }
+  },
+  "scope_confusion": {
+    "generic | generic": 2,
+    "off_topic | off_topic": 8,
+    "off_topic | unclear": 1,
+    "station_operations_only | off_topic": 1,
+    "station_operations_only | station_operations_only": 3,
+    "station_spatial | generic": 1,
+    "station_spatial | station_spatial": 20,
+    "station_spatial | surroundings_only": 1,
+    "surroundings_only | generic": 1,
+    "surroundings_only | station_spatial": 1,
+    "train_interior | train_interior": 1
+  },
+  "spatial_binary": {
+    "n": 40,
+    "raw_agreement": 0.925,
+    "cohen_kappa": 0.849246231155779,
+    "counts_coder1": {
+      "spatial": 22,
+      "other": 18
+    },
+    "counts_coder2": {
+      "spatial": 21,
+      "other": 19
+    }
+  },
+  "aspect_mention": {
+    "C": {
+      "n": 40,
+      "raw_agreement": 0.925,
+      "cohen_kappa": 0.6250000000000001,
+      "counts_coder1": {
+        "absent": 36,
+        "discussed": 4
+      },
+      "counts_coder2": {
+        "absent": 35,
+        "discussed": 5
+      }
+    },
+    "M": {
+      "n": 40,
+      "raw_agreement": 0.95,
+      "cohen_kappa": 0.0,
+      "counts_coder1": {
+        "absent": 38,
+        "discussed": 2
+      },
+      "counts_coder2": {
+        "absent": 40
+      }
+    },
+    "F": {
+      "n": 40,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 38,
+        "discussed": 2
+      },
+      "counts_coder2": {
+        "absent": 38,
+        "discussed": 2
+      }
+    },
+    "V": {
+      "n": 40,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 39,
+        "discussed": 1
+      },
+      "counts_coder2": {
+        "absent": 39,
+        "discussed": 1
+      }
+    },
+    "D": {
+      "n": 40,
+      "raw_agreement": 0.9,
+      "cohen_kappa": 0.6551724137931035,
+      "counts_coder1": {
+        "absent": 34,
+        "discussed": 6
+      },
+      "counts_coder2": {
+        "absent": 32,
+        "discussed": 8
+      }
+    },
+    "T": {
+      "n": 40,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 38,
+        "discussed": 2
+      },
+      "counts_coder2": {
+        "absent": 38,
+        "discussed": 2
+      }
+    },
+    "Q": {
+      "n": 40,
+      "raw_agreement": 0.95,
+      "cohen_kappa": 0.6428571428571426,
+      "counts_coder1": {
+        "discussed": 4,
+        "absent": 36
+      },
+      "counts_coder2": {
+        "discussed": 2,
+        "absent": 38
+      }
+    },
+    "A": {
+      "n": 40,
+      "raw_agreement": 0.825,
+      "cohen_kappa": 0.42622950819672106,
+      "counts_coder1": {
+        "absent": 33,
+        "discussed": 7
+      },
+      "counts_coder2": {
+        "absent": 32,
+        "discussed": 8
+      }
+    },
+    "L": {
+      "n": 40,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "absent": 38,
+        "discussed": 2
+      },
+      "counts_coder2": {
+        "absent": 38,
+        "discussed": 2
+      }
+    }
+  },
+  "aspect_polarity_when_both_mention": {
+    "C": {
+      "n": 3,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "positive": 3
+      },
+      "counts_coder2": {
+        "positive": 3
+      }
+    },
+    "M": {
+      "n": 0,
+      "raw_agreement": null,
+      "cohen_kappa": null,
+      "counts_coder1": {},
+      "counts_coder2": {}
+    },
+    "F": {
+      "n": 2,
+      "raw_agreement": 0.5,
+      "cohen_kappa": 0.0,
+      "counts_coder1": {
+        "neutral": 1,
+        "negative": 1
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    },
+    "V": {
+      "n": 1,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 1
+      },
+      "counts_coder2": {
+        "negative": 1
+      }
+    },
+    "D": {
+      "n": 5,
+      "raw_agreement": 0.8,
+      "cohen_kappa": 0.5833333333333334,
+      "counts_coder1": {
+        "negative": 3,
+        "mixed": 1,
+        "neutral": 1
+      },
+      "counts_coder2": {
+        "negative": 4,
+        "neutral": 1
+      }
+    },
+    "T": {
+      "n": 2,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 2
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    },
+    "Q": {
+      "n": 2,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 2
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    },
+    "A": {
+      "n": 4,
+      "raw_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "counts_coder1": {
+        "negative": 2,
+        "positive": 2
+      },
+      "counts_coder2": {
+        "negative": 2,
+        "positive": 2
+      }
+    },
+    "L": {
+      "n": 2,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null,
+      "counts_coder1": {
+        "negative": 2
+      },
+      "counts_coder2": {
+        "negative": 2
+      }
+    }
+  },
+  "aspect_mention_pooled": {
+    "n": 360,
+    "raw_agreement": 0.95,
+    "cohen_kappa": 0.6727272727272725,
+    "counts_coder1": {
+      "false": 330,
+      "true": 30
+    },
+    "counts_coder2": {
+      "false": 330,
+      "true": 30
+    }
+  }
+}

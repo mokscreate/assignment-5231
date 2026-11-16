@@ -1,0 +1,1209 @@
+{
+  "schema": "nsl-round2-v1",
+  "coder_id": "Zhang",
+  "exported_at": "2026-11-16T07:00:44.327Z",
+  "n_complete": 40,
+  "n_total": 40,
+  "records": [
+    {
+      "overlap_id": "S01",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNOc3Z1NzNRRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "negative",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:55:52.068Z"
+    },
+    {
+      "overlap_id": "S02",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURXazR5V2ZnEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:55:57.803Z"
+    },
+    {
+      "overlap_id": "S03",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNSd19iM2dnRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:03.270Z"
+    },
+    {
+      "overlap_id": "S04",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNSZ0tXWXZBRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "negative",
+        "Q": "negative",
+        "A": "negative",
+        "L": "negative"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:15.634Z"
+    },
+    {
+      "overlap_id": "S05",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNZdE9EdWRnEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:19.128Z"
+    },
+    {
+      "overlap_id": "S06",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnTUNvMjRmaFJ3EAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:23.158Z"
+    },
+    {
+      "overlap_id": "S07",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNReWVLZkh3EAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "negative",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:34.023Z"
+    },
+    {
+      "overlap_id": "S08",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUN3OVpQMUdnEAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:50.185Z"
+    },
+    {
+      "overlap_id": "S09",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25KTVFuUnRhRTlZZG5RM1FUWjVTV0ZQYmxWSlZXYxAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:56:53.960Z"
+    },
+    {
+      "overlap_id": "S10",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtaVk3b0hBEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "negative",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:07.090Z"
+    },
+    {
+      "overlap_id": "S11",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pVeVlWWnpkek0wWWkxTFZHNHhWRFJKVm01WWIyYxAB",
+      "complete": true,
+      "scope": "train_interior",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:19.459Z"
+    },
+    {
+      "overlap_id": "S12",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURCdi1pTDhBRRAB",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:22.874Z"
+    },
+    {
+      "overlap_id": "S13",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURHM3BQZ3dBRRAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:25.057Z"
+    },
+    {
+      "overlap_id": "S14",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNDbWNMRUN3EAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:27.384Z"
+    },
+    {
+      "overlap_id": "S15",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURweTlDOHd3RRAB",
+      "complete": true,
+      "scope": "surroundings_only",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:35.963Z"
+    },
+    {
+      "overlap_id": "S16",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBbjd2dVV3EAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "negative",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:44.777Z"
+    },
+    {
+      "overlap_id": "S17",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUN3d1l2ZDl3RRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:53.531Z"
+    },
+    {
+      "overlap_id": "S18",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNQcU5PUklnEAE",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:57:55.852Z"
+    },
+    {
+      "overlap_id": "S19",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNxemVDVzNBRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:58:01.674Z"
+    },
+    {
+      "overlap_id": "S20",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNucXVmQ2p3RRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:58:08.678Z"
+    },
+    {
+      "overlap_id": "S21",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNPeXVPa3BRRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "negative"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:01.622Z"
+    },
+    {
+      "overlap_id": "S22",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURBM3RMX1NREAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "negative",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:07.777Z"
+    },
+    {
+      "overlap_id": "S23",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNIajZ1Z3lRRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "neutral",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:17.813Z"
+    },
+    {
+      "overlap_id": "S24",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNnMllUVVpBEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "positive",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:24.627Z"
+    },
+    {
+      "overlap_id": "S25",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUR1a0xxbHpBRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "positive",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:27.936Z"
+    },
+    {
+      "overlap_id": "S26",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURBZ2ZMZ25RRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "positive",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:31.455Z"
+    },
+    {
+      "overlap_id": "S27",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tvMFVVRkZkV05WZVMxQ1ZuVkhXREJYY25aUVZXYxAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:35.765Z"
+    },
+    {
+      "overlap_id": "S28",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURZMU5Md2JBEAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:38.731Z"
+    },
+    {
+      "overlap_id": "S29",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNCbEpiMmNnEAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:40.971Z"
+    },
+    {
+      "overlap_id": "S30",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURLNXVDQ3ZBRRAB",
+      "complete": true,
+      "scope": "station_operations_only",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:43.314Z"
+    },
+    {
+      "overlap_id": "S31",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNBOTdqN1lnEAE",
+      "complete": true,
+      "scope": "unclear",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:55.293Z"
+    },
+    {
+      "overlap_id": "S32",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tvMFdtSnZRa3QwTVRaZllrMWhVVE5zY21OdVYyYxAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T06:59:59.850Z"
+    },
+    {
+      "overlap_id": "S33",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNabXQzcWF3EAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "negative",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:07.182Z"
+    },
+    {
+      "overlap_id": "S34",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQwOFkydENREAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:11.349Z"
+    },
+    {
+      "overlap_id": "S35",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUQtLVpUTk1BEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "positive",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:15.546Z"
+    },
+    {
+      "overlap_id": "S36",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNJd3VEdnpBRRAB",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:17.731Z"
+    },
+    {
+      "overlap_id": "S37",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNndFlYc0x3EAE",
+      "complete": true,
+      "scope": "generic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:25.573Z"
+    },
+    {
+      "overlap_id": "S38",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNnOWVHbC1RRRAB",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "negative",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:30.341Z"
+    },
+    {
+      "overlap_id": "S39",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURZeGUtTkVnEAE",
+      "complete": true,
+      "scope": "station_spatial",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:33.179Z"
+    },
+    {
+      "overlap_id": "S40",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURCcjRxT2Z3EAE",
+      "complete": true,
+      "scope": "off_topic",
+      "aspects": {
+        "C": "absent",
+        "M": "absent",
+        "F": "absent",
+        "V": "absent",
+        "D": "absent",
+        "T": "absent",
+        "Q": "absent",
+        "A": "absent",
+        "L": "absent"
+      },
+      "notes": "",
+      "prefilled_absent": [
+        "C",
+        "M",
+        "F",
+        "V",
+        "D",
+        "T",
+        "Q",
+        "A",
+        "L"
+      ],
+      "updated_at": "2026-11-16T07:00:38.041Z"
+    }
+  ]
+}

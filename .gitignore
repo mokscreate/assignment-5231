@@ -1,0 +1,7 @@
+__pycache__/
+*.joblib
+annotation/private_key.json
+annotation/overlap60_private_key.json
+annotation/round2_private_key.json
+
+!prospective/frozen_models.joblib
