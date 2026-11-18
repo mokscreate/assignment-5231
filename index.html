@@ -1,4 +1,34 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>NSL MRT station-space experiences</title>
-<meta http-equiv="refresh" content="0; url=game_and_site/results_site.html"></head>
-<body><p>Opening the results site… If nothing happens, <a href="game_and_site/results_site.html">click here</a>.</p></body></html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NSL MRT: Let's play a game, then see the results</title>
+<style>
+html,body{margin:0;height:100%;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#22303F}
+#bar{height:48px;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #C9D8EE;box-sizing:border-box}
+#bar .t{font-weight:700;color:#1F5FBF;margin-right:14px;font-size:16px}
+#bar button{font:inherit;font-size:14px;padding:6px 14px;border:1px solid #1F5FBF;background:#fff;color:#1F5FBF;border-radius:6px;cursor:pointer}
+#bar button.on{background:#1F5FBF;color:#fff}
+#bar .sp{flex:1}
+#f{display:block;width:100%;height:calc(100% - 48px);border:0}
+</style></head><body>
+<div id="bar"><span class="t" id="ttl"></span>
+<button id="bg"></button><button id="br"></button><span class="sp"></span>
+<button id="en">EN</button><button id="zh">中文</button></div>
+<iframe id="f" title="NSL MRT"></iframe>
+<script>
+var S={en:{t:"NSL MRT",g:"Play the game",r:"See the results",g_:"game_and_site/game_en.html",r_:"game_and_site/results_site.html"},
+zh:{t:"NSL 地铁",g:"玩游戏",r:"查看结果",g_:"game_and_site/game_zh.html",r_:"game_and_site/results_site_zh.html"}};
+var lang="en",page="g";
+try{var h=location.hash.replace("#","").split("-");if(h[0]==="zh")lang="zh";if(h[1]==="r")page="r";
+if(!h[0]){var s=localStorage.getItem("nsl_lang");if(s==="zh")lang="zh";}}catch(e){}
+function show(){var o=S[lang];document.documentElement.lang=lang;
+ttl.textContent=o.t;bg.textContent=o.g;br.textContent=o.r;
+bg.className=page==="g"?"on":"";br.className=page==="r"?"on":"";
+en.className=lang==="en"?"on":"";zh.className=lang==="zh"?"on":"";
+f.src=page==="g"?o.g_:o.r_;
+try{localStorage.setItem("nsl_lang",lang)}catch(e){}
+history.replaceState(null,"","#"+lang+"-"+page);}
+bg.onclick=function(){page="g";show()};br.onclick=function(){page="r";show()};
+en.onclick=function(){lang="en";show()};zh.onclick=function(){lang="zh";show()};
+show();
+</script></body></html>
