@@ -7,15 +7,16 @@ We collected accessible Google Maps rating records for the 27 North-South Line (
 (2) whether the most-mentioned aspects also contribute most to rating prediction, and
 (3) whether recurring complaints can ground small, station-specific improvement proposals.
 
-**Live website:** https://mokscreate.github.io/assignment-5231/
+**One link (game first, then results; English by default, Chinese switch at top right):** https://mokscreate.github.io/assignment-5231/
 
-**Local website:** open `index.html` (or `game_and_site/results_site.html`) — results, station map and evidence cards; Chinese version `results_site_zh.html`; station-management demo `game_en.html` / `game_zh.html`.
+**Locally:** open `index.html` in a browser. It opens the station-management game (a small demo for playing with the data) and has a button to the results page. The two pages are `game_and_site/game_en.html` / `game_zh.html` and `game_and_site/results_site.html` / `results_site_zh.html`.
 
 ## Main results
 
 | | |
 |---|---|
 | Data | 21,796 ratings, 7,636 with text, 3,884 automatically selected reviews match a spatial-aspect dictionary (27 stations, collected 4 Oct 2026, newest-first) |
+| Priority score (complaints x (share of those complaints rated 1-3 stars - 19.75%)) | crowding 60, cleanliness 47, wayfinding 45, amenities 37, connectivity 37, walking/transfer 36, vertical access 28, thermal comfort 22, lighting/design 8 (extra low ratings) |
 | Human coding (two authors, independent, rating-blind) | Round 1 (60 reviews): scope κ 0.26, aspect-mention κ 0.47 → codebook v2 → Round 2 (40 new reviews): 0.77 / 0.67; all 100 adjudicated |
 | Dictionary vs human labels (100) | station space or not: precision 0.77, recall 0.82; individual aspects: 0.49 / 0.61 |
 | Station-grouped 5-fold CV (AUC) | baseline 0.48 · mention flags 0.61–0.63 · aspect + polarity 0.74 · mention + overall tone (control) 0.76 · TF-IDF text 0.80 |
