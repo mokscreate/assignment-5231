@@ -37,11 +37,11 @@ button.stn{cursor:pointer}
 <div class="funnel" id="funnel"></div>
 <p class="note">26 个站收集到的条数与平台显示总数一致；油池站显示 146 条，收集到 145 条。网上评论者是自我选择的，不是乘客的随机样本。</p></section>
 
-<section><h2>2. 提得最多的，不一定最能预测评分</h2>
-<p class="lead">左：各方面被提及的比例。右：把该方面打乱后，留出站上的 AUC 下降多少（只看提及的逻辑回归，按站 bootstrap 的 95% 区间）。在这个模型里，垂直交通（V）很少被提及却排第 2，清洁（Q）正好相反。下表显示这些排名换了模型是否还成立。</p>
-<svg id="fchart" viewBox="0 0 900 360" width="100%"></svg>
-<p class="note">这里的重要性指拟合模型对该特征的依赖，不代表改造空间能带来的收益。负值或接近零只说明打乱后没有损害这个模型的预测，不代表这个问题实际上不重要。逻辑回归和随机森林给出的排序也不同。</p>
-<h3 style="font-size:17px;margin:22px 0 4px">排序有多稳定？</h3><p class="lead" style="margin-bottom:8px">在 300 次按站重抽样中，各方面排进前三的比例；B 为只看提及的模型，C 为提及加正负的模型。另列出负面提及中 1–3 星的比例（全部评论为 20%）。</p><table id="rankt"></table><p class="note">站城连接（C）和设施（A）在所有模型里都排进前三。垂直交通（V）只在只看提及的逻辑回归里稳定；加入正负后清洁（Q）升到第一，因为“干净 / 脏”本身带情绪。正负由固定规则判断（见第 5 节）。重抽样使用固定的折外预测。</p></section>
+<section><h2>2. 先修哪类抱怨</h2>
+<p class="lead">优先分 = 该方面的抱怨条数 ×（这些抱怨中打 1–3 星的比例 − 19.75%）。19.75% 是全部纳入分析的评论里打 1–3 星的比例，所以优先分表示：这类抱怨比普通评论多带来多少条低分。</p>
+<svg id="pchart" viewBox="0 0 900 380" width="100%"></svg>
+<table id="ptab"></table>
+<p class="note">抱怨由固定规则按评论分句判断（见第 5 节），不是训练出来的语言模型。设施和站城连接被提到最多，但其中多数是好评，所以排名靠后。排名与口径有关：低分只算 1–2 星时，拥挤降到第 5；只看近两年时，找路排第 1。优先分衡量的是抱怨和低分同时出现的地方，不说明改了就能提高评分。</p></section>
 
 <section><h2>3. 空间特征是否包含评分信息？</h2>
 <p class="lead">所有模型都在整站留出的数据上评估（按站分组 5 折，三个随机种子，实际形成两种不同的划分）。高分占样本 80%，只看准确率会误导，所以同时给出 macro F1 和 AUC。</p>
@@ -77,19 +77,13 @@ document.getElementById('funnel').innerHTML=[[21796,'条评分记录，27 个站
 // perf
 const P=D.perf,PP=D.polarity.perf,rows=[['MajorityBaseline','多数类基线'],['SpatialLogisticRegression','B · 只看提及，逻辑回归'],['SpatialRandomForest','B · 只看提及，随机森林'],['C_polarity_logistic','C · 提及加正负，逻辑回归'],['C_polarity_forest','C · 提及加正负，随机森林'],['S_mention_plus_overall_sentiment_forest','对照 · 提及加整条评论情绪，随机森林'],['TextTFIDFLogisticRegression','TF-IDF 逻辑回归（文本）']];
 document.getElementById('perf').innerHTML='<tr><th>模型</th><th>AUC</th><th>Macro F1</th><th>平衡准确率</th><th>准确率</th></tr>'+rows.map(r=>{const m=(P[r[0]]||{}).mean_repeated_group_cv||PP[r[0]];return `<tr><td>${r[1]}</td><td>${m.auc.toFixed(3)}</td><td>${m.macro_f1.toFixed(3)}</td><td>${m.balanced_accuracy.toFixed(3)}</td><td>${m.accuracy.toFixed(3)}</td></tr>`}).join('');
-// factor chart
-(function(){const F=[...D.factors].sort((a,b)=>a.frequency_rank-b.frequency_rank);const svg=document.getElementById('fchart');
- const rowH=34,top=30;let h='';
- h+=`<text x="10" y="16" font-size="13" fill="#5b6475">3,884 条评论中提及该方面的比例</text><text x="500" y="16" font-size="13" fill="#5b6475">打乱后 AUC 的下降（逻辑回归，95% 区间）</text>`;
- const x0=210,sc=2.2; const ix=v=>540+(v+0.012)/0.05*280;
- h+=`<line x1="${ix(0)}" x2="${ix(0)}" y1="22" y2="${top+9*rowH}" stroke="#aab" stroke-dasharray="3 3"/>`;
- F.forEach((r,i)=>{const y=top+i*rowH;const c=r.code;
-  h+=`<text x="10" y="${y+19}" font-size="14" fill="#1d2330">${NM[c]}</text>`;
-  h+=`<rect x="${x0}" y="${y+6}" width="${r.mention_percent*sc}" height="18" fill="#9db7e3"/><text x="${x0+r.mention_percent*sc+6}" y="${y+20}" font-size="12.5" fill="#1d2330">${r.mention_percent.toFixed(0)}%</text>`;
-  const lo=ix(r.logistic_ci_low),hi=ix(r.logistic_ci_high),mid=ix(r.logistic_auc_drop);
-  h+=`<line x1="${lo}" x2="${hi}" y1="${y+15}" y2="${y+15}" stroke="#1f5fbf" stroke-width="2"/><circle cx="${mid}" cy="${y+15}" r="5.5" fill="#1f5fbf"/>`;
-  h+=`<text x="850" y="${y+20}" font-size="12" fill="#5b6475">第 ${r.logistic_importance_rank} 名</text>`;});
- svg.setAttribute('viewBox',`0 0 900 ${top+9*rowH+10}`);svg.innerHTML=h;})();
+// priority score
+(function(){const R=[["D", 452, 149, 59.7], ["Q", 114, 70, 47.485], ["F", 176, 80, 45.2], ["A", 201, 77, 37.3], ["C", 177, 72, 37.0], ["M", 112, 58, 35.9], ["V", 59, 40, 28.3], ["T", 90, 40, 22.2], ["L", 24, 13, 8.3]];const NM={"C": "站城连接", "M": "步行/换乘", "F": "找路/指示", "V": "垂直交通", "D": "拥挤/人流", "T": "热舒适", "Q": "清洁/维护", "A": "设施/停留支持", "L": "照明/设计"};const TH=["方面", "抱怨条数", "其中 1–3 星", "低分占比", "优先分"];
+const svg=document.getElementById('pchart');const mx=70,x0=210,w=560,rh=34,top=44;let h=`<text x="${x0}" y="22" font-size="15" font-weight="700" fill="#1d2330">优先分（多出来的低分条数）</text>`;
+R.forEach((r,i)=>{const y=top+i*rh,bw=r[3]/mx*w,c=i<3?'#1f5fbf':'#9db5de';h+=`<text x="${x0-10}" y="${y+19}" text-anchor="end" font-size="14" fill="#1d2330">${NM[r[0]]}</text><rect x="${x0}" y="${y+4}" width="${bw}" height="22" fill="${c}"/><text x="${x0+bw+8}" y="${y+20}" font-size="14" fill="#1d2330">${Math.round(r[3])}</text>`});
+svg.innerHTML=h;
+document.getElementById('ptab').innerHTML='<tr>'+TH.map(t=>'<th>'+t+'</th>').join('')+'</tr>'+R.map(r=>`<tr><td>${NM[r[0]]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${Math.round(r[2]/r[1]*100)}%</td><td>${r[3].toFixed(0)}</td></tr>`).join('');})();
+
 // map
 const st=D.stations;const lat=st.map(s=>s.lat),lng=st.map(s=>s.lng);
 const [la0,la1]=[Math.min(...lat),Math.max(...lat)],[lo0,lo1]=[Math.min(...lng),Math.max(...lng)];
@@ -99,10 +93,7 @@ sorted.forEach((s,i)=>{const r=4+Math.sqrt(s.model)/2.6;const has=D.cases[s.code
  ms+=`<g class="stn" data-c="${s.code}" style="cursor:pointer"><rect x="0" y="${Y(i)-13}" width="300" height="26" fill="transparent"/><circle cx="40" cy="${Y(i)}" r="${r}" fill="${has?'#1f5fbf':'#fff'}" stroke="${has?'#1f5fbf':'#d9322e'}" stroke-width="2"/>
  <text x="70" y="${Y(i)+4}" font-size="13" fill="#1d2330" font-weight="${has?700:400}">${esc(s.name)} <tspan fill="#8a93a3" font-size="11">${s.code}</tspan></text></g>`;});
 document.getElementById('mapsvg').innerHTML=ms;
-(function(){const Pz=D.polarity,order=['V','Q','L','M','F','T','C','A','D'];const pc=v=>Math.round(v*100)+'%';
- const h=`<tr><th>方面</th><th>提及比例</th><th>负面提及中 1–3★</th><th>B 逻辑回归</th><th>B 随机森林</th><th>C 逻辑回归</th><th>C 随机森林</th></tr>`+order.map(k=>{const fr=D.factors.find(f=>f.code==k),n=Pz.neg[k];
-  return `<tr><td>${NM[k]}</td><td>${fr.mention_percent.toFixed(0)}%</td><td>${n[0]?pc(n[1]/n[0]):'–'} <span style="color:#8a93a3">(${n[1]}/${n[0]})</span></td>${['B_mention_logistic','B_mention_forest','C_polarity_logistic','C_polarity_forest'].map(m=>{const v=Pz.top3[m][k];return `<td style="${v>=.9?'font-weight:700;color:#1f5fbf':''}">${pc(v)}</td>`}).join('')}</tr>`}).join('');
- document.getElementById('rankt').innerHTML=h;})();
+
 
 function bar(n,l,m,h){const t=n||1;return `<div class="bar"><i style="width:${l/t*100}%;background:#c0392b"></i><i style="width:${m/t*100}%;background:#c9ced8"></i><i style="width:${h/t*100}%;background:#2e7d5b"></i></div><div class="legend">1–2 星 ${l} 条 · 3 星 ${m} 条 · 4–5 星 ${h} 条（共 ${n} 条）</div>`}
 function show(code){const s=st.find(x=>x.code==code);const c=D.cases[code];
