@@ -37,11 +37,11 @@ button.stn{cursor:pointer}
 <div class="funnel" id="funnel"></div>
 <p class="note">Counts match the displayed total at 26 stations; Yew Tee returned 145 of 146. Online reviewers are self-selected, so this is not a random sample of passengers.</p></section>
 
-<section><h2>2. Mentioned most is not predictive most</h2>
-<p class="lead">Left: how often each aspect is mentioned. Right: how much the held-out AUC falls when that aspect is shuffled (mention-only logistic regression, 95% station-bootstrap interval). In this model vertical access (V) is rarely mentioned but ranks second, while cleanliness (Q) is the reverse. The table below shows how far these ranks hold across models.</p>
-<svg id="fchart" viewBox="0 0 900 360" width="100%"></svg>
-<p class="note">Importance here is predictive reliance in a fitted model, not a benefit of changing the space. A negative or near-zero value only means that shuffling did not hurt this model's predictions; it does not mean the issue does not matter in practice. Rankings also differ between the logistic and random forest models.</p>
-<h3 style="font-size:17px;margin:22px 0 4px">How stable are the ranks?</h3><p class="lead" style="margin-bottom:8px">Share of 300 station resamples in which each aspect ranks in the top three, for mention-only (B) and aspect-plus-polarity (C) models, next to how often a negative mention comes with a 1–3★ rating (all reviews: 20%).</p><table id="rankt"></table><p class="note">Connectivity (C) and amenities (A) occupy the top three point-estimate ranks in all four spatial models shown here (B and C). Within these four models, vertical access (V) ranks in the top three consistently only in mention-only logistic regression; cleanliness (Q) moves to first once polarity is added, because “clean” and “dirty” carry sentiment. Polarity is coded by fixed rules (see section 5). Resamples reuse fixed out-of-fold predictions.</p></section>
+<section><h2>2. Which complaints to fix first</h2>
+<p class="lead">Priority score = number of complaints about an aspect × (share of those complaints that come with a 1–3★ rating − 19.75%). 19.75% is the share of all analysed reviews rated 1–3★, so the score is the number of low ratings these complaints add beyond what an average review would bring.</p>
+<svg id="pchart" viewBox="0 0 900 380" width="100%"></svg>
+<table id="ptab"></table>
+<p class="note">Complaints are counted by fixed rules on each review clause (see section 5), not by a trained language model. Amenities and connectivity are mentioned most often, but most of those mentions are praise, so they rank lower here. The order depends on the definition: if low ratings are 1–2★ only, crowding falls to fifth; looking only at the last two years, wayfinding ranks first. The score ranks where complaints coincide with low ratings; it does not show that fixing an aspect would raise ratings.</p></section>
 
 <section><h2>3. Do the spatial features carry rating information?</h2>
 <p class="lead">All models were evaluated on whole held-out stations (grouped 5-fold, three seeded runs that form two distinct partitions). High ratings are 80% of the sample, so accuracy alone is misleading and macro F1 and AUC are shown.</p>
@@ -77,19 +77,13 @@ document.getElementById('funnel').innerHTML=[[21796,'rating records, 27 stations
 // perf
 const P=D.perf,PP=D.polarity.perf,rows=[['MajorityBaseline','Majority baseline'],['SpatialLogisticRegression','B · Mention flags, logistic'],['SpatialRandomForest','B · Mention flags, random forest'],['C_polarity_logistic','C · Aspect + polarity, logistic'],['C_polarity_forest','C · Aspect + polarity, random forest'],['S_mention_plus_overall_sentiment_forest','Control · mentions + whole-review sentiment, forest'],['TextTFIDFLogisticRegression','TF-IDF logistic (text)']];
 document.getElementById('perf').innerHTML='<tr><th>Model</th><th>AUC</th><th>Macro F1</th><th>Balanced acc.</th><th>Accuracy</th></tr>'+rows.map(r=>{const m=(P[r[0]]||{}).mean_repeated_group_cv||PP[r[0]];return `<tr><td>${r[1]}</td><td>${m.auc.toFixed(3)}</td><td>${m.macro_f1.toFixed(3)}</td><td>${m.balanced_accuracy.toFixed(3)}</td><td>${m.accuracy.toFixed(3)}</td></tr>`}).join('');
-// factor chart
-(function(){const F=[...D.factors].sort((a,b)=>a.frequency_rank-b.frequency_rank);const svg=document.getElementById('fchart');
- const rowH=34,top=30;let h='';
- h+=`<text x="10" y="16" font-size="13" fill="#5b6475">Share of 3,884 reviews mentioning the aspect</text><text x="500" y="16" font-size="13" fill="#5b6475">AUC drop when shuffled (logistic, 95% interval)</text>`;
- const x0=210,sc=2.2; const ix=v=>540+(v+0.012)/0.05*280;
- h+=`<line x1="${ix(0)}" x2="${ix(0)}" y1="22" y2="${top+9*rowH}" stroke="#aab" stroke-dasharray="3 3"/>`;
- F.forEach((r,i)=>{const y=top+i*rowH;const c=r.code;
-  h+=`<text x="10" y="${y+19}" font-size="14" fill="#1d2330">${NM[c]}</text>`;
-  h+=`<rect x="${x0}" y="${y+6}" width="${r.mention_percent*sc}" height="18" fill="#9db7e3"/><text x="${x0+r.mention_percent*sc+6}" y="${y+20}" font-size="12.5" fill="#1d2330">${r.mention_percent.toFixed(0)}%</text>`;
-  const lo=ix(r.logistic_ci_low),hi=ix(r.logistic_ci_high),mid=ix(r.logistic_auc_drop);
-  h+=`<line x1="${lo}" x2="${hi}" y1="${y+15}" y2="${y+15}" stroke="#1f5fbf" stroke-width="2"/><circle cx="${mid}" cy="${y+15}" r="5.5" fill="#1f5fbf"/>`;
-  h+=`<text x="850" y="${y+20}" font-size="12" fill="#5b6475">rank ${r.logistic_importance_rank}</text>`;});
- svg.setAttribute('viewBox',`0 0 900 ${top+9*rowH+10}`);svg.innerHTML=h;})();
+// priority score
+(function(){const R=[["D", 452, 149, 59.7], ["Q", 114, 70, 47.485], ["F", 176, 80, 45.2], ["A", 201, 77, 37.3], ["C", 177, 72, 37.0], ["M", 112, 58, 35.9], ["V", 59, 40, 28.3], ["T", 90, 40, 22.2], ["L", 24, 13, 8.3]];const NM={"C": "Connectivity", "M": "Walking / transfer", "F": "Wayfinding", "V": "Vertical access", "D": "Crowding", "T": "Thermal comfort", "Q": "Cleanliness / upkeep", "A": "Amenities / stay support", "L": "Lighting / design"};const TH=["Aspect", "Complaints", "In 1–3★ reviews", "Share low", "Priority score"];
+const svg=document.getElementById('pchart');const mx=70,x0=210,w=560,rh=34,top=44;let h=`<text x="${x0}" y="22" font-size="15" font-weight="700" fill="#1d2330">Priority score (extra low ratings)</text>`;
+R.forEach((r,i)=>{const y=top+i*rh,bw=r[3]/mx*w,c=i<3?'#1f5fbf':'#9db5de';h+=`<text x="${x0-10}" y="${y+19}" text-anchor="end" font-size="14" fill="#1d2330">${NM[r[0]]}</text><rect x="${x0}" y="${y+4}" width="${bw}" height="22" fill="${c}"/><text x="${x0+bw+8}" y="${y+20}" font-size="14" fill="#1d2330">${Math.round(r[3])}</text>`});
+svg.innerHTML=h;
+document.getElementById('ptab').innerHTML='<tr>'+TH.map(t=>'<th>'+t+'</th>').join('')+'</tr>'+R.map(r=>`<tr><td>${NM[r[0]]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${Math.round(r[2]/r[1]*100)}%</td><td>${r[3].toFixed(0)}</td></tr>`).join('');})();
+
 // map
 const st=D.stations;const lat=st.map(s=>s.lat),lng=st.map(s=>s.lng);
 const [la0,la1]=[Math.min(...lat),Math.max(...lat)],[lo0,lo1]=[Math.min(...lng),Math.max(...lng)];
@@ -99,10 +93,7 @@ sorted.forEach((s,i)=>{const r=4+Math.sqrt(s.model)/2.6;const has=D.cases[s.code
  ms+=`<g class="stn" data-c="${s.code}" style="cursor:pointer"><rect x="0" y="${Y(i)-13}" width="300" height="26" fill="transparent"/><circle cx="40" cy="${Y(i)}" r="${r}" fill="${has?'#1f5fbf':'#fff'}" stroke="${has?'#1f5fbf':'#d9322e'}" stroke-width="2"/>
  <text x="70" y="${Y(i)+4}" font-size="13" fill="#1d2330" font-weight="${has?700:400}">${esc(s.name)} <tspan fill="#8a93a3" font-size="11">${s.code}</tspan></text></g>`;});
 document.getElementById('mapsvg').innerHTML=ms;
-(function(){const Pz=D.polarity,order=['V','Q','L','M','F','T','C','A','D'];const pc=v=>Math.round(v*100)+'%';
- const h=`<tr><th>Aspect</th><th>Mentioned</th><th>1–3★ when negative</th><th>B logistic</th><th>B forest</th><th>C logistic</th><th>C forest</th></tr>`+order.map(k=>{const fr=D.factors.find(f=>f.code==k),n=Pz.neg[k];
-  return `<tr><td>${NM[k]}</td><td>${fr.mention_percent.toFixed(0)}%</td><td>${n[0]?pc(n[1]/n[0]):'–'} <span style="color:#8a93a3">(${n[1]}/${n[0]})</span></td>${['B_mention_logistic','B_mention_forest','C_polarity_logistic','C_polarity_forest'].map(m=>{const v=Pz.top3[m][k];return `<td style="${v>=.9?'font-weight:700;color:#1f5fbf':''}">${pc(v)}</td>`}).join('')}</tr>`}).join('');
- document.getElementById('rankt').innerHTML=h;})();
+
 
 function bar(n,l,m,h){const t=n||1;return `<div class="bar"><i style="width:${l/t*100}%;background:#c0392b"></i><i style="width:${m/t*100}%;background:#c9ced8"></i><i style="width:${h/t*100}%;background:#2e7d5b"></i></div><div class="legend">${l} rated 1–2 · ${m} rated 3 · ${h} rated 4–5 (of ${n})</div>`}
 function show(code){const s=st.find(x=>x.code==code);const c=D.cases[code];
